@@ -39,7 +39,9 @@ System.register([], function (_export) {
 
       _export('FEATURE', FEATURE);
 
-      PLATFORM = {};
+      PLATFORM = {
+        noop: function noop() {}
+      };
 
       _export('PLATFORM', PLATFORM);
 

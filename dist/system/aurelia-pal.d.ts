@@ -6,6 +6,7 @@ declare module 'aurelia-pal' {
     arrayObserve: boolean;
   }
   export interface Platform {
+    noop: Function;
     location: Object;
     history: Object;
     XMLHttpRequest: XMLHttpRequest;

@@ -30,13 +30,16 @@ interface Feature {
 export const FEATURE: Feature = {};
 
 interface Platform {
+  noop: Function,
   location: Object;
   history: Object;
   XMLHttpRequest: XMLHttpRequest;
   findModuleForExport(exp: any): Object;
 }
 
-export const PLATFORM: Platform = {};
+export const PLATFORM: Platform = {
+  noop: function() {}
+};
 
 PLATFORM.global = (function() {
   // Workers don’t have `window`, only `self`

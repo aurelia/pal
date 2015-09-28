@@ -26,7 +26,9 @@ function AggregateError(message, innerError, skipIfAlreadyAggregate) {
 var FEATURE = {};
 
 exports.FEATURE = FEATURE;
-var PLATFORM = {};
+var PLATFORM = {
+  noop: function noop() {}
+};
 
 exports.PLATFORM = PLATFORM;
 PLATFORM.global = (function () {
