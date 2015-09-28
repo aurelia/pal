@@ -28,7 +28,8 @@ define(['exports'], function (exports) {
 
   exports.FEATURE = FEATURE;
   var PLATFORM = {
-    noop: function noop() {}
+    noop: function noop() {},
+    eachModule: function eachModule() {}
   };
 
   exports.PLATFORM = PLATFORM;

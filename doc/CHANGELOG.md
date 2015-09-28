@@ -1,3 +1,11 @@
+### 0.1.3 (2015-09-27)
+
+
+#### Bug Fixes
+
+* **platform:** correct eachModule signature ([ccc1c5e4](http://github.com/aurelia/pal/commit/ccc1c5e43b786acce56371a434f945659e5a36fe))
+
+
 ### 0.1.2 (2015-09-27)
 
 

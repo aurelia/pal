@@ -30,15 +30,16 @@ interface Feature {
 export const FEATURE: Feature = {};
 
 interface Platform {
-  noop: Function,
+  noop: Function;
   location: Object;
   history: Object;
   XMLHttpRequest: XMLHttpRequest;
-  findModuleForExport(exp: any): Object;
+  eachModule(callback: (key: string, value: Object) => boolean): void;
 }
 
 export const PLATFORM: Platform = {
-  noop: function() {}
+  noop: function() {},
+  eachModule() {}
 };
 
 PLATFORM.global = (function() {

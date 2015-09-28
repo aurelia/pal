@@ -27,7 +27,8 @@ var FEATURE = {};
 
 exports.FEATURE = FEATURE;
 var PLATFORM = {
-  noop: function noop() {}
+  noop: function noop() {},
+  eachModule: function eachModule() {}
 };
 
 exports.PLATFORM = PLATFORM;

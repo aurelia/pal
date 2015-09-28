@@ -40,7 +40,8 @@ System.register([], function (_export) {
       _export('FEATURE', FEATURE);
 
       PLATFORM = {
-        noop: function noop() {}
+        noop: function noop() {},
+        eachModule: function eachModule() {}
       };
 
       _export('PLATFORM', PLATFORM);

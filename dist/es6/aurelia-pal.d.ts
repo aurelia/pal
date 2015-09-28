@@ -10,7 +10,7 @@ declare module 'aurelia-pal' {
     location: Object;
     history: Object;
     XMLHttpRequest: XMLHttpRequest;
-    findModuleForExport(exp: any): Object;
+    eachModule(callback: ((key: string, value: Object) => boolean)): void;
   }
   export interface Dom {
     Element: Element;
