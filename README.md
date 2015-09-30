@@ -9,7 +9,7 @@ This library is part of the [Aurelia](http://www.aurelia.io/) platform and conta
 
 ## Dependencies
 
-* [aurelia-pal](https://github.com/aurelia/pal)
+
 
 ## Used By
 
