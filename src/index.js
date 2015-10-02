@@ -65,6 +65,8 @@ interface Dom {
   boundary: string;
   addEventListener(eventName: string, callback: Function, capture: boolean): void;
   removeEventListener(eventName: string, callback: Function, capture: boolean): void;
+  getTitle(): string;
+  setTitle(value: string): void;
   adoptNode(node: Node): Node;
   createElement(tagName: string): Element;
   createTextNode(text: string): Text;
