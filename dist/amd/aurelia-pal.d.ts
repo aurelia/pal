@@ -6,15 +6,20 @@ declare module 'aurelia-pal' {
     arrayObserve: boolean;
   }
   export interface Platform {
+    global: Object;
     noop: Function;
     location: Object;
     history: Object;
     XMLHttpRequest: XMLHttpRequest;
     eachModule(callback: ((key: string, value: Object) => boolean)): void;
+    addEventListener(eventName: string, callback: Function, capture: boolean): void;
+    removeEventListener(eventName: string, callback: Function, capture: boolean): void;
   }
   export interface Dom {
     Element: Element;
     boundary: string;
+    addEventListener(eventName: string, callback: Function, capture: boolean): void;
+    removeEventListener(eventName: string, callback: Function, capture: boolean): void;
     adoptNode(node: Node): Node;
     createElement(tagName: string): Element;
     createTextNode(text: string): Text;

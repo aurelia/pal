@@ -1,6 +1,6 @@
 {
   "name": "aurelia-pal",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "description": "Aurelia's platform abstraction layer.",
   "keywords": [
     "aurelia",
@@ -57,26 +57,11 @@
     "yargs": "^2.1.1"
   },
   "aurelia": {
-    "usedBy": [],
     "documentation": {
-      "links": [
+      "articles": [
         {
-          "rel": "license",
-          "mediaType": "text/plain",
-          "title": "The MIT License (MIT)",
-          "href": "LICENSE"
-        },
-        {
-          "rel": "describedby",
-          "mediaType": "application/aurelia-doc+json",
-          "title": "API",
-          "href": "doc/api.json"
-        },
-        {
-          "rel": "version-history",
-          "mediaType": "text/markdown",
-          "title": "Change Log",
-          "href": "doc/CHANGELOG.md"
+          "title": "The Platform Abstraction Layer",
+          "href": "doc/article/en-US/the-platform-abstraction-layer.html"
         }
       ]
     }

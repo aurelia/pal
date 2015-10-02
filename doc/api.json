@@ -6,7 +6,7 @@
   "flags": {},
   "children": [
     {
-      "id": 20,
+      "id": 31,
       "name": "Dom",
       "kind": 256,
       "kindString": "Interface",
@@ -15,7 +15,7 @@
       },
       "children": [
         {
-          "id": 21,
+          "id": 32,
           "name": "Element",
           "kind": 1024,
           "kindString": "Property",
@@ -28,7 +28,7 @@
           }
         },
         {
-          "id": 22,
+          "id": 33,
           "name": "boundary",
           "kind": 1024,
           "kindString": "Property",
@@ -41,7 +41,64 @@
           }
         },
         {
-          "id": 23,
+          "id": 34,
+          "name": "addEventListener",
+          "kind": 2048,
+          "kindString": "Method",
+          "flags": {
+            "isExported": true
+          },
+          "signatures": [
+            {
+              "id": 35,
+              "name": "addEventListener",
+              "kind": 4096,
+              "kindString": "Call signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 36,
+                  "name": "eventName",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "string"
+                  }
+                },
+                {
+                  "id": 37,
+                  "name": "callback",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "name": "Function"
+                  }
+                },
+                {
+                  "id": 38,
+                  "name": "capture",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "boolean"
+                  }
+                }
+              ],
+              "type": {
+                "type": "instrinct",
+                "name": "void"
+              }
+            }
+          ]
+        },
+        {
+          "id": 44,
           "name": "adoptNode",
           "kind": 2048,
           "kindString": "Method",
@@ -50,14 +107,14 @@
           },
           "signatures": [
             {
-              "id": 24,
+              "id": 45,
               "name": "adoptNode",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 25,
+                  "id": 46,
                   "name": "node",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -76,7 +133,7 @@
           ]
         },
         {
-          "id": 32,
+          "id": 53,
           "name": "createComment",
           "kind": 2048,
           "kindString": "Method",
@@ -85,14 +142,14 @@
           },
           "signatures": [
             {
-              "id": 33,
+              "id": 54,
               "name": "createComment",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 34,
+                  "id": 55,
                   "name": "text",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -111,7 +168,7 @@
           ]
         },
         {
-          "id": 40,
+          "id": 61,
           "name": "createCustomEvent",
           "kind": 2048,
           "kindString": "Method",
@@ -120,14 +177,14 @@
           },
           "signatures": [
             {
-              "id": 41,
+              "id": 62,
               "name": "createCustomEvent",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 42,
+                  "id": 63,
                   "name": "eventType",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -138,7 +195,7 @@
                   }
                 },
                 {
-                  "id": 43,
+                  "id": 64,
                   "name": "options",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -157,7 +214,7 @@
           ]
         },
         {
-          "id": 35,
+          "id": 56,
           "name": "createDocumentFragment",
           "kind": 2048,
           "kindString": "Method",
@@ -166,7 +223,7 @@
           },
           "signatures": [
             {
-              "id": 36,
+              "id": 57,
               "name": "createDocumentFragment",
               "kind": 4096,
               "kindString": "Call signature",
@@ -179,7 +236,7 @@
           ]
         },
         {
-          "id": 26,
+          "id": 47,
           "name": "createElement",
           "kind": 2048,
           "kindString": "Method",
@@ -188,14 +245,14 @@
           },
           "signatures": [
             {
-              "id": 27,
+              "id": 48,
               "name": "createElement",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 28,
+                  "id": 49,
                   "name": "tagName",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -214,7 +271,7 @@
           ]
         },
         {
-          "id": 37,
+          "id": 58,
           "name": "createMutationObserver",
           "kind": 2048,
           "kindString": "Method",
@@ -223,14 +280,14 @@
           },
           "signatures": [
             {
-              "id": 38,
+              "id": 59,
               "name": "createMutationObserver",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 39,
+                  "id": 60,
                   "name": "callback",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -249,7 +306,7 @@
           ]
         },
         {
-          "id": 56,
+          "id": 77,
           "name": "createTemplateFromMarkup",
           "kind": 2048,
           "kindString": "Method",
@@ -258,14 +315,14 @@
           },
           "signatures": [
             {
-              "id": 57,
+              "id": 78,
               "name": "createTemplateFromMarkup",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 58,
+                  "id": 79,
                   "name": "markup",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -284,7 +341,7 @@
           ]
         },
         {
-          "id": 29,
+          "id": 50,
           "name": "createTextNode",
           "kind": 2048,
           "kindString": "Method",
@@ -293,14 +350,14 @@
           },
           "signatures": [
             {
-              "id": 30,
+              "id": 51,
               "name": "createTextNode",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 31,
+                  "id": 52,
                   "name": "text",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -319,7 +376,7 @@
           ]
         },
         {
-          "id": 44,
+          "id": 65,
           "name": "getComputedStyle",
           "kind": 2048,
           "kindString": "Method",
@@ -328,14 +385,14 @@
           },
           "signatures": [
             {
-              "id": 45,
+              "id": 66,
               "name": "getComputedStyle",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 46,
+                  "id": 67,
                   "name": "element",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -354,7 +411,7 @@
           ]
         },
         {
-          "id": 47,
+          "id": 68,
           "name": "getElementById",
           "kind": 2048,
           "kindString": "Method",
@@ -363,14 +420,14 @@
           },
           "signatures": [
             {
-              "id": 48,
+              "id": 69,
               "name": "getElementById",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 49,
+                  "id": 70,
                   "name": "id",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -389,7 +446,7 @@
           ]
         },
         {
-          "id": 68,
+          "id": 89,
           "name": "injectStyles",
           "kind": 2048,
           "kindString": "Method",
@@ -398,14 +455,14 @@
           },
           "signatures": [
             {
-              "id": 69,
+              "id": 90,
               "name": "injectStyles",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 70,
+                  "id": 91,
                   "name": "styles",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -416,7 +473,7 @@
                   }
                 },
                 {
-                  "id": 71,
+                  "id": 92,
                   "name": "destination",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -429,7 +486,7 @@
                   }
                 },
                 {
-                  "id": 72,
+                  "id": 93,
                   "name": "prepend",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -450,7 +507,7 @@
           ]
         },
         {
-          "id": 53,
+          "id": 74,
           "name": "nextElementSibling",
           "kind": 2048,
           "kindString": "Method",
@@ -459,14 +516,14 @@
           },
           "signatures": [
             {
-              "id": 54,
+              "id": 75,
               "name": "nextElementSibling",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 55,
+                  "id": 76,
                   "name": "element",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -485,7 +542,7 @@
           ]
         },
         {
-          "id": 50,
+          "id": 71,
           "name": "querySelectorAll",
           "kind": 2048,
           "kindString": "Method",
@@ -494,14 +551,14 @@
           },
           "signatures": [
             {
-              "id": 51,
+              "id": 72,
               "name": "querySelectorAll",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 52,
+                  "id": 73,
                   "name": "query",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -520,7 +577,64 @@
           ]
         },
         {
-          "id": 64,
+          "id": 39,
+          "name": "removeEventListener",
+          "kind": 2048,
+          "kindString": "Method",
+          "flags": {
+            "isExported": true
+          },
+          "signatures": [
+            {
+              "id": 40,
+              "name": "removeEventListener",
+              "kind": 4096,
+              "kindString": "Call signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 41,
+                  "name": "eventName",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "string"
+                  }
+                },
+                {
+                  "id": 42,
+                  "name": "callback",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "name": "Function"
+                  }
+                },
+                {
+                  "id": 43,
+                  "name": "capture",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "boolean"
+                  }
+                }
+              ],
+              "type": {
+                "type": "instrinct",
+                "name": "void"
+              }
+            }
+          ]
+        },
+        {
+          "id": 85,
           "name": "removeNode",
           "kind": 2048,
           "kindString": "Method",
@@ -529,14 +643,14 @@
           },
           "signatures": [
             {
-              "id": 65,
+              "id": 86,
               "name": "removeNode",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 66,
+                  "id": 87,
                   "name": "node",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -547,7 +661,7 @@
                   }
                 },
                 {
-                  "id": 67,
+                  "id": 88,
                   "name": "parentNode",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -566,7 +680,7 @@
           ]
         },
         {
-          "id": 59,
+          "id": 80,
           "name": "replaceNode",
           "kind": 2048,
           "kindString": "Method",
@@ -575,14 +689,14 @@
           },
           "signatures": [
             {
-              "id": 60,
+              "id": 81,
               "name": "replaceNode",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 61,
+                  "id": 82,
                   "name": "newNode",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -593,7 +707,7 @@
                   }
                 },
                 {
-                  "id": 62,
+                  "id": 83,
                   "name": "node",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -604,7 +718,7 @@
                   }
                 },
                 {
-                  "id": 63,
+                  "id": 84,
                   "name": "parentNode",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -628,29 +742,31 @@
           "title": "Properties",
           "kind": 1024,
           "children": [
-            21,
-            22
+            32,
+            33
           ]
         },
         {
           "title": "Methods",
           "kind": 2048,
           "children": [
-            23,
-            32,
-            40,
-            35,
-            26,
-            37,
-            56,
-            29,
+            34,
             44,
-            47,
-            68,
             53,
+            61,
+            56,
+            47,
+            58,
+            77,
             50,
-            64,
-            59
+            65,
+            68,
+            89,
+            74,
+            71,
+            39,
+            85,
+            80
           ]
         }
       ]
@@ -740,7 +856,7 @@
       },
       "children": [
         {
-          "id": 12,
+          "id": 13,
           "name": "XMLHttpRequest",
           "kind": 1024,
           "kindString": "Property",
@@ -753,7 +869,20 @@
           }
         },
         {
-          "id": 11,
+          "id": 9,
+          "name": "global",
+          "kind": 1024,
+          "kindString": "Property",
+          "flags": {
+            "isExported": true
+          },
+          "type": {
+            "type": "reference",
+            "name": "Object"
+          }
+        },
+        {
+          "id": 12,
           "name": "history",
           "kind": 1024,
           "kindString": "Property",
@@ -766,7 +895,7 @@
           }
         },
         {
-          "id": 10,
+          "id": 11,
           "name": "location",
           "kind": 1024,
           "kindString": "Property",
@@ -779,7 +908,7 @@
           }
         },
         {
-          "id": 9,
+          "id": 10,
           "name": "noop",
           "kind": 1024,
           "kindString": "Property",
@@ -792,7 +921,64 @@
           }
         },
         {
-          "id": 13,
+          "id": 21,
+          "name": "addEventListener",
+          "kind": 2048,
+          "kindString": "Method",
+          "flags": {
+            "isExported": true
+          },
+          "signatures": [
+            {
+              "id": 22,
+              "name": "addEventListener",
+              "kind": 4096,
+              "kindString": "Call signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 23,
+                  "name": "eventName",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "string"
+                  }
+                },
+                {
+                  "id": 24,
+                  "name": "callback",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "name": "Function"
+                  }
+                },
+                {
+                  "id": 25,
+                  "name": "capture",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "boolean"
+                  }
+                }
+              ],
+              "type": {
+                "type": "instrinct",
+                "name": "void"
+              }
+            }
+          ]
+        },
+        {
+          "id": 14,
           "name": "eachModule",
           "kind": 2048,
           "kindString": "Method",
@@ -801,14 +987,14 @@
           },
           "signatures": [
             {
-              "id": 14,
+              "id": 15,
               "name": "eachModule",
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
               "parameters": [
                 {
-                  "id": 15,
+                  "id": 16,
                   "name": "callback",
                   "kind": 32768,
                   "kindString": "Parameter",
@@ -816,21 +1002,21 @@
                   "type": {
                     "type": "reflection",
                     "declaration": {
-                      "id": 16,
+                      "id": 17,
                       "name": "__type",
                       "kind": 65536,
                       "kindString": "Type literal",
                       "flags": {},
                       "signatures": [
                         {
-                          "id": 17,
+                          "id": 18,
                           "name": "__call",
                           "kind": 4096,
                           "kindString": "Call signature",
                           "flags": {},
                           "parameters": [
                             {
-                              "id": 18,
+                              "id": 19,
                               "name": "key",
                               "kind": 32768,
                               "kindString": "Parameter",
@@ -841,7 +1027,7 @@
                               }
                             },
                             {
-                              "id": 19,
+                              "id": 20,
                               "name": "value",
                               "kind": 32768,
                               "kindString": "Parameter",
@@ -868,6 +1054,63 @@
               }
             }
           ]
+        },
+        {
+          "id": 26,
+          "name": "removeEventListener",
+          "kind": 2048,
+          "kindString": "Method",
+          "flags": {
+            "isExported": true
+          },
+          "signatures": [
+            {
+              "id": 27,
+              "name": "removeEventListener",
+              "kind": 4096,
+              "kindString": "Call signature",
+              "flags": {},
+              "parameters": [
+                {
+                  "id": 28,
+                  "name": "eventName",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "string"
+                  }
+                },
+                {
+                  "id": 29,
+                  "name": "callback",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "reference",
+                    "name": "Function"
+                  }
+                },
+                {
+                  "id": 30,
+                  "name": "capture",
+                  "kind": 32768,
+                  "kindString": "Parameter",
+                  "flags": {},
+                  "type": {
+                    "type": "instrinct",
+                    "name": "boolean"
+                  }
+                }
+              ],
+              "type": {
+                "type": "instrinct",
+                "name": "void"
+              }
+            }
+          ]
         }
       ],
       "groups": [
@@ -875,23 +1118,26 @@
           "title": "Properties",
           "kind": 1024,
           "children": [
+            13,
+            9,
             12,
             11,
-            10,
-            9
+            10
           ]
         },
         {
           "title": "Methods",
           "kind": 2048,
           "children": [
-            13
+            21,
+            14,
+            26
           ]
         }
       ]
     },
     {
-      "id": 80,
+      "id": 101,
       "name": "DOM",
       "kind": 32,
       "kindString": "Variable",
@@ -901,12 +1147,12 @@
       "type": {
         "type": "reference",
         "name": "Dom",
-        "id": 20,
+        "id": 31,
         "moduleName": "\"aurelia-pal\""
       }
     },
     {
-      "id": 78,
+      "id": 99,
       "name": "FEATURE",
       "kind": 32,
       "kindString": "Variable",
@@ -921,7 +1167,7 @@
       }
     },
     {
-      "id": 79,
+      "id": 100,
       "name": "PLATFORM",
       "kind": 32,
       "kindString": "Variable",
@@ -936,7 +1182,7 @@
       }
     },
     {
-      "id": 73,
+      "id": 94,
       "name": "AggregateError",
       "kind": 64,
       "kindString": "Function",
@@ -945,7 +1191,7 @@
       },
       "signatures": [
         {
-          "id": 74,
+          "id": 95,
           "name": "AggregateError",
           "kind": 4096,
           "kindString": "Call signature",
@@ -955,7 +1201,7 @@
           },
           "parameters": [
             {
-              "id": 75,
+              "id": 96,
               "name": "message",
               "kind": 32768,
               "kindString": "Parameter",
@@ -966,7 +1212,7 @@
               }
             },
             {
-              "id": 76,
+              "id": 97,
               "name": "innerError",
               "kind": 32768,
               "kindString": "Parameter",
@@ -979,7 +1225,7 @@
               }
             },
             {
-              "id": 77,
+              "id": 98,
               "name": "skipIfAlreadyAggregate",
               "kind": 32768,
               "kindString": "Parameter",
@@ -1000,7 +1246,7 @@
       ]
     },
     {
-      "id": 81,
+      "id": 102,
       "name": "initializePAL",
       "kind": 64,
       "kindString": "Function",
@@ -1009,14 +1255,14 @@
       },
       "signatures": [
         {
-          "id": 82,
+          "id": 103,
           "name": "initializePAL",
           "kind": 4096,
           "kindString": "Call signature",
           "flags": {},
           "parameters": [
             {
-              "id": 83,
+              "id": 104,
               "name": "platform",
               "kind": 32768,
               "kindString": "Parameter",
@@ -1029,7 +1275,7 @@
               }
             },
             {
-              "id": 84,
+              "id": 105,
               "name": "feature",
               "kind": 32768,
               "kindString": "Parameter",
@@ -1042,7 +1288,7 @@
               }
             },
             {
-              "id": 85,
+              "id": 106,
               "name": "dom",
               "kind": 32768,
               "kindString": "Parameter",
@@ -1050,7 +1296,7 @@
               "type": {
                 "type": "reference",
                 "name": "Dom",
-                "id": 20,
+                "id": 31,
                 "moduleName": "\"aurelia-pal\""
               }
             }
@@ -1068,7 +1314,7 @@
       "title": "Interfaces",
       "kind": 256,
       "children": [
-        20,
+        31,
         3,
         8
       ]
@@ -1077,17 +1323,17 @@
       "title": "Variables",
       "kind": 32,
       "children": [
-        80,
-        78,
-        79
+        101,
+        99,
+        100
       ]
     },
     {
       "title": "Functions",
       "kind": 64,
       "children": [
-        73,
-        81
+        94,
+        102
       ]
     }
   ]
