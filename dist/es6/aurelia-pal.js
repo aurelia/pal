@@ -73,6 +73,7 @@ interface Dom {
   createDocumentFragment(): DocumentFragment;
   createMutationObserver(callback: Function): MutationObserver;
   createCustomEvent(eventType: string, options: Object): CustomEvent;
+  dispatchEvent(evt: Event): void;
   getComputedStyle(element: Element): CSSStyleDeclaration;
   getElementById(id: string): Element;
   querySelectorAll(query: string): NodeList;

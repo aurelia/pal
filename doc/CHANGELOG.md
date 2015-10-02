@@ -1,3 +1,11 @@
+### 0.1.6 (2015-10-02)
+
+
+#### Features
+
+* **DOM:** add dispatchEvent ([55c07b55](http://github.com/aurelia/pal/commit/55c07b55e794904cdaae1b1fc86cfe4b377c7192))
+
+
 ### 0.1.5 (2015-10-02)
 
 
