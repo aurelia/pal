@@ -18,6 +18,7 @@ declare module 'aurelia-pal' {
   export interface Dom {
     Element: Element;
     boundary: string;
+    title: string;
     addEventListener(eventName: string, callback: Function, capture: boolean): void;
     removeEventListener(eventName: string, callback: Function, capture: boolean): void;
     adoptNode(node: Node): Node;
@@ -44,5 +45,5 @@ declare module 'aurelia-pal' {
   export const FEATURE: Feature;
   export const PLATFORM: Platform;
   export const DOM: Dom;
-  export function initializePAL(platform: Platform, feature: Feature, dom: Dom): void;
+  export function initializePAL(callback: ((platform: Platform, feature: Feature, dom: Dom) => void)): void;
 }

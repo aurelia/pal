@@ -63,6 +63,7 @@ PLATFORM.global = (function() {
 interface Dom {
   Element: Element;
   boundary: string;
+  title: string;
   addEventListener(eventName: string, callback: Function, capture: boolean): void;
   removeEventListener(eventName: string, callback: Function, capture: boolean): void;
   adoptNode(node: Node): Node;
@@ -84,8 +85,6 @@ interface Dom {
 
 export const DOM: Dom = {};
 
-export function initializePAL(platform: Platform, feature: Feature, dom: Dom): void {
-  Object.assign(PLATFORM, platform);
-  Object.assign(FEATURE, feature);
-  Object.assign(DOM, dom);
+export function initializePAL(callback: (platform: Platform, feature: Feature, dom: Dom) => void): void {
+  callback(PLATFORM, FEATURE, DOM);
 }

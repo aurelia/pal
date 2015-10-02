@@ -49,9 +49,7 @@ define(['exports'], function (exports) {
 
   exports.DOM = DOM;
 
-  function initializePAL(platform, feature, dom) {
-    Object.assign(PLATFORM, platform);
-    Object.assign(FEATURE, feature);
-    Object.assign(DOM, dom);
+  function initializePAL(callback) {
+    callback(PLATFORM, FEATURE, DOM);
   }
 });

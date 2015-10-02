@@ -1,3 +1,12 @@
+### 0.1.5 (2015-10-02)
+
+
+#### Features
+
+* **DOM:** add getTitle and setTitle methods ([ae630995](http://github.com/aurelia/pal/commit/ae630995f993c6b43718438d9f53578ee11c968c))
+* **all:** new initialization mechanism; make DOM.title a property ([8d11bd1e](http://github.com/aurelia/pal/commit/8d11bd1e46e45df89832e4d22baef0f3458593b2))
+
+
 ### 0.1.4 (2015-10-02)
 
 
