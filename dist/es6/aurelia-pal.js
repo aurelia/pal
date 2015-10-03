@@ -79,6 +79,7 @@ interface Dom {
   querySelectorAll(query: string): NodeList;
   nextElementSibling(element: Node): Element;
   createTemplateFromMarkup(markup: string): Element;
+  appendNode(newNode: Node, parentNode?:Node): void;
   replaceNode(newNode: Node, node: Node, parentNode: Node): void;
   removeNode(node: Node, parentNode: Node): void;
   injectStyles(styles: string, destination?: Element, prepend?:boolean): Node;

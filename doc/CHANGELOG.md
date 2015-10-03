@@ -1,3 +1,11 @@
+### 0.1.7 (2015-10-02)
+
+
+#### Features
+
+* **dom:** add appendNode ([9b0ebabe](http://github.com/aurelia/pal/commit/9b0ebabe3cbfdc1b19dfb307eae763d0f0df83ab))
+
+
 ### 0.1.6 (2015-10-02)
 
 
