@@ -1,3 +1,11 @@
+### 0.1.9 (2015-10-04)
+
+
+#### Features
+
+* **dom:** add SVGElement ([b848bb9b](http://github.com/aurelia/pal/commit/b848bb9b7fb1064f4c8c7e153d42118ddffe67cf))
+
+
 ### 0.1.8 (2015-10-04)
 
 

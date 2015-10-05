@@ -17,6 +17,7 @@ declare module 'aurelia-pal' {
   }
   export interface Dom {
     Element: Element;
+    SVGElement: SVGElement;
     boundary: string;
     title: string;
     addEventListener(eventName: string, callback: Function, capture: boolean): void;
