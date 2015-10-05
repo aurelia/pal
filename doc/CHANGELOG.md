@@ -1,3 +1,11 @@
+### 0.1.8 (2015-10-04)
+
+
+#### Features
+
+* **index:** add getPropertyDescriptor polyfill ([cc2297ad](http://github.com/aurelia/pal/commit/cc2297ad4e761c8eef9061144362725d87d415b4))
+
+
 ### 0.1.7 (2015-10-02)
 
 
