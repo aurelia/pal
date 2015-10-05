@@ -62,6 +62,7 @@ PLATFORM.global = (function() {
 
 interface Dom {
   Element: Element;
+  SVGElement: SVGElement;
   boundary: string;
   title: string;
   addEventListener(eventName: string, callback: Function, capture: boolean): void;
