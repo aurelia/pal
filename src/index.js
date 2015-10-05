@@ -88,5 +88,17 @@ interface Dom {
 export const DOM: Dom = {};
 
 export function initializePAL(callback: (platform: Platform, feature: Feature, dom: Dom) => void): void {
+  if (typeof Object.getPropertyDescriptor !== 'function') {
+    Object.getPropertyDescriptor = function(subject, name) {
+      let pd = Object.getOwnPropertyDescriptor(subject, name);
+      let proto = Object.getPrototypeOf(subject);
+      while (typeof pd === 'undefined' && proto !== null) {
+        pd = Object.getOwnPropertyDescriptor(proto, name);
+        proto = Object.getPrototypeOf(proto);
+      }
+      return pd;
+    };
+  }
+
   callback(PLATFORM, FEATURE, DOM);
 }
