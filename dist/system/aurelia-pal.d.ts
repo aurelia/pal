@@ -1,6 +1,7 @@
 declare module 'aurelia-pal' {
   export interface Feature {
     shadowDOM: boolean;
+    scopedCSS: boolean;
     htmlTemplateElement: boolean;
     objectObserve: boolean;
     arrayObserve: boolean;
@@ -20,6 +21,7 @@ declare module 'aurelia-pal' {
     SVGElement: SVGElement;
     boundary: string;
     title: string;
+    activeElement: Element;
     addEventListener(eventName: string, callback: Function, capture: boolean): void;
     removeEventListener(eventName: string, callback: Function, capture: boolean): void;
     adoptNode(node: Node): Node;

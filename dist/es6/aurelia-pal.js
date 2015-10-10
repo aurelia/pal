@@ -22,6 +22,7 @@ export function AggregateError(message: string, innerError?: Error, skipIfAlread
 
 interface Feature {
   shadowDOM: boolean;
+  scopedCSS: boolean;
   htmlTemplateElement: boolean;
   objectObserve: boolean;
   arrayObserve: boolean;
@@ -65,6 +66,7 @@ interface Dom {
   SVGElement: SVGElement;
   boundary: string;
   title: string;
+  activeElement: Element;
   addEventListener(eventName: string, callback: Function, capture: boolean): void;
   removeEventListener(eventName: string, callback: Function, capture: boolean): void;
   adoptNode(node: Node): Node;
