@@ -13,6 +13,9 @@
       "flags": {
         "isExported": true
       },
+      "comment": {
+        "shortText": "Represents the core APIs of the DOM."
+      },
       "children": [
         {
           "id": 33,
@@ -21,6 +24,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "The global DOM Element type."
           },
           "type": {
             "type": "reference",
@@ -35,6 +41,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "The global DOM SVGElement type."
+          },
           "type": {
             "type": "reference",
             "name": "SVGElement"
@@ -47,6 +56,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "The document's active/focused element."
           },
           "type": {
             "type": "reference",
@@ -61,6 +73,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "A key representing a DOM boundary."
+          },
           "type": {
             "type": "instrinct",
             "name": "string"
@@ -73,6 +88,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "The document title."
           },
           "type": {
             "type": "instrinct",
@@ -906,6 +924,9 @@
       "flags": {
         "isExported": true
       },
+      "comment": {
+        "shortText": "Enables discovery of what features the runtime environment supports."
+      },
       "children": [
         {
           "id": 8,
@@ -914,6 +935,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "Does the runtime environment support Array.observe?"
           },
           "type": {
             "type": "instrinct",
@@ -928,6 +952,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "Does the runtime environment support native HTMLTemplateElement?"
+          },
           "type": {
             "type": "instrinct",
             "name": "boolean"
@@ -940,6 +967,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "Does the runtime environment support Object.observe?"
           },
           "type": {
             "type": "instrinct",
@@ -954,6 +984,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "Does the runtime environment support the css scoped attribute?"
+          },
           "type": {
             "type": "instrinct",
             "name": "boolean"
@@ -966,6 +999,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "Does the runtime environment support ShadowDOM?"
           },
           "type": {
             "type": "instrinct",
@@ -995,6 +1031,9 @@
       "flags": {
         "isExported": true
       },
+      "comment": {
+        "shortText": "Represents the core APIs of the runtime environment."
+      },
       "children": [
         {
           "id": 14,
@@ -1003,6 +1042,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "The runtime's XMLHttpRequest API."
           },
           "type": {
             "type": "reference",
@@ -1017,6 +1059,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "The runtime environment's global."
+          },
           "type": {
             "type": "reference",
             "name": "Object"
@@ -1029,6 +1074,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "The runtime's history API."
           },
           "type": {
             "type": "reference",
@@ -1043,6 +1091,9 @@
           "flags": {
             "isExported": true
           },
+          "comment": {
+            "shortText": "The runtime's location API."
+          },
           "type": {
             "type": "reference",
             "name": "Object"
@@ -1055,6 +1106,9 @@
           "kindString": "Property",
           "flags": {
             "isExported": true
+          },
+          "comment": {
+            "shortText": "A function wich does nothing."
           },
           "type": {
             "type": "reference",
@@ -1104,7 +1158,9 @@
                   "name": "capture",
                   "kind": 32768,
                   "kindString": "Parameter",
-                  "flags": {},
+                  "flags": {
+                    "isOptional": true
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "boolean"
@@ -1239,7 +1295,9 @@
                   "name": "capture",
                   "kind": 32768,
                   "kindString": "Parameter",
-                  "flags": {},
+                  "flags": {
+                    "isOptional": true
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "boolean"
@@ -1285,6 +1343,9 @@
       "flags": {
         "isExported": true
       },
+      "comment": {
+        "shortText": "The singleton instance of the Dom API."
+      },
       "type": {
         "type": "reference",
         "name": "Dom",
@@ -1300,6 +1361,9 @@
       "flags": {
         "isExported": true
       },
+      "comment": {
+        "shortText": "The singleton instance of the Feature discovery API."
+      },
       "type": {
         "type": "reference",
         "name": "Feature",
@@ -1314,6 +1378,9 @@
       "kindString": "Variable",
       "flags": {
         "isExported": true
+      },
+      "comment": {
+        "shortText": "The singleton instance of the Platform API."
       },
       "type": {
         "type": "reference",
@@ -1338,7 +1405,8 @@
           "kindString": "Call signature",
           "flags": {},
           "comment": {
-            "shortText": "Creates an instance of Error that aggregates and preserves an innerError."
+            "shortText": "Creates an instance of Error that aggregates and preserves an innerError.",
+            "returns": "The Error instance.\n"
           },
           "parameters": [
             {
@@ -1347,6 +1415,9 @@
               "kind": 32768,
               "kindString": "Parameter",
               "flags": {},
+              "comment": {
+                "text": "The error message."
+              },
               "type": {
                 "type": "instrinct",
                 "name": "string"
@@ -1360,6 +1431,9 @@
               "flags": {
                 "isOptional": true
               },
+              "comment": {
+                "text": "The inner error message to aggregate."
+              },
               "type": {
                 "type": "reference",
                 "name": "Error"
@@ -1372,6 +1446,9 @@
               "kindString": "Parameter",
               "flags": {
                 "isOptional": true
+              },
+              "comment": {
+                "text": "Indicates to not wrap the inner error if it itself already has an innerError."
               },
               "type": {
                 "type": "instrinct",
@@ -1401,6 +1478,9 @@
           "kind": 4096,
           "kindString": "Call signature",
           "flags": {},
+          "comment": {
+            "shortText": "Enables initializing a specific implementation of the Platform Abstraction Layer (PAL)."
+          },
           "parameters": [
             {
               "id": 115,
@@ -1408,6 +1488,9 @@
               "kind": 32768,
               "kindString": "Parameter",
               "flags": {},
+              "comment": {
+                "text": "Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.\n"
+              },
               "type": {
                 "type": "reflection",
                 "declaration": {
