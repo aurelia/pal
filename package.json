@@ -58,12 +58,7 @@
   },
   "aurelia": {
     "documentation": {
-      "articles": [
-        {
-          "title": "The Platform Abstraction Layer",
-          "href": "doc/article/en-US/the-platform-abstraction-layer.html"
-        }
-      ]
+      "articles": []
     }
   }
 }
