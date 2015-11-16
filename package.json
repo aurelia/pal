@@ -17,6 +17,7 @@
     "type": "git",
     "url": "http://github.com/aurelia/pal"
   },
+  "jspmNodeConversion": false,
   "jspm": {
     "main": "aurelia-pal",
     "format": "amd",
