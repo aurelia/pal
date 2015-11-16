@@ -1,3 +1,6 @@
+### 1.0.0-beta.1 (2015-11-15)
+
+
 ## 0.3.0 (2015-11-09)
 
 
@@ -99,4 +102,3 @@
 #### Features
 
 * **platform:** add noop ([3193afb5](http://github.com/aurelia/pal/commit/3193afb555241add6d57e2943d527f414fdc4546))
-

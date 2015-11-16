@@ -112,6 +112,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Add an event listener to the document."
+              },
               "parameters": [
                 {
                   "id": 40,
@@ -119,6 +122,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string representing the event type to listen for."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -130,6 +136,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The function that receives a notification when an event of the specified type occurs."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Function"
@@ -141,6 +150,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "If true, useCapture indicates that the user wishes to initiate capture.\n"
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "boolean"
@@ -169,6 +181,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Adopts a node from an external document.",
+                "returns": "The adopted node able to be used in the document.\n"
+              },
               "parameters": [
                 {
                   "id": 50,
@@ -176,6 +192,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node to be adopted."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -204,6 +223,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Appends a node to the parent, if provided, or the document.body otherwise."
+              },
               "parameters": [
                 {
                   "id": 89,
@@ -211,6 +233,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node to append."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -223,6 +248,9 @@
                   "kindString": "Parameter",
                   "flags": {
                     "isOptional": true
+                  },
+                  "comment": {
+                    "text": "The node to append to, otherwise the document.body.\n"
                   },
                   "type": {
                     "type": "reference",
@@ -252,6 +280,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates a new Comment node.",
+                "returns": "A Comment node.\n"
+              },
               "parameters": [
                 {
                   "id": 59,
@@ -259,6 +291,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string to populate the new Comment node."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -287,6 +322,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates a new CustomEvent.",
+                "returns": "A CustomEvent.\n"
+              },
               "parameters": [
                 {
                   "id": 67,
@@ -294,6 +333,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string representing the event type."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -305,6 +347,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "An options object specifying bubbles:boolean, cancelable:boolean and/or detail:Object information."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Object"
@@ -333,6 +378,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates a new DocumentFragment.",
+                "returns": "A DocumentFragment.\n"
+              },
               "type": {
                 "type": "reference",
                 "name": "DocumentFragment"
@@ -355,6 +404,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates the specified HTML element or an HTMLUnknownElement if the given element name isn't a known one.",
+                "returns": "The created element.\n"
+              },
               "parameters": [
                 {
                   "id": 53,
@@ -362,6 +415,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string that specifies the type of element to be created."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -390,6 +446,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates a new MutationObserver.",
+                "returns": "A MutationObservere.\n"
+              },
               "parameters": [
                 {
                   "id": 64,
@@ -397,6 +457,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A callback that will recieve the change records with the mutations."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Function"
@@ -425,6 +488,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates an HTMLTemplateElement using the markup provided.",
+                "returns": "The instance of HTMLTemplateElement that was created from the provided markup.\n"
+              },
               "parameters": [
                 {
                   "id": 86,
@@ -432,6 +499,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string containing the markup to turn into a template. Note: This string must contain the template element as well."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -460,6 +530,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Creates a new Text node.",
+                "returns": "A Text node.\n"
+              },
               "parameters": [
                 {
                   "id": 56,
@@ -467,6 +541,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string to populate the new Text node."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -495,6 +572,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Dispatches an event on the document."
+              },
               "parameters": [
                 {
                   "id": 71,
@@ -502,6 +582,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The event to dispatch.\n"
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Event"
@@ -530,6 +613,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Gives the values of all the CSS properties of an element after applying the active stylesheets and resolving any basic computation those values may contain.",
+                "returns": "The computed styles.\n"
+              },
               "parameters": [
                 {
                   "id": 74,
@@ -537,6 +624,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The Element for which to get the computed style."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Element"
@@ -565,6 +655,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Locates an element in the document according to its id.",
+                "returns": "The found element.\n"
+              },
               "parameters": [
                 {
                   "id": 77,
@@ -572,6 +666,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The id to search the document for."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -600,6 +697,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Injects styles into the destination element, or the document.head if no destination is provided.",
+                "returns": "The Style node that was created.\n"
+              },
               "parameters": [
                 {
                   "id": 102,
@@ -607,6 +708,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The css text to injext."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -620,6 +724,9 @@
                   "flags": {
                     "isOptional": true
                   },
+                  "comment": {
+                    "text": "The destination element to inject the css text into. If not specified it will default to the document.head."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Element"
@@ -632,6 +739,9 @@
                   "kindString": "Parameter",
                   "flags": {
                     "isOptional": true
+                  },
+                  "comment": {
+                    "text": "Indicates whether or not the styles should be prepended to the destination. By default they are appended."
                   },
                   "type": {
                     "type": "instrinct",
@@ -661,6 +771,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Gets the element that is the next sibling of the provided element.",
+                "returns": "The next sibling Element of the provided Element.\n"
+              },
               "parameters": [
                 {
                   "id": 83,
@@ -668,6 +782,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The element whose next sibling is being located."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -696,6 +813,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Performs a query selector on the document and returns all located matches.",
+                "returns": "A list of all matched elements in the document.\n"
+              },
               "parameters": [
                 {
                   "id": 80,
@@ -703,6 +824,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The query to use in searching the document."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -731,6 +855,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Remove an event listener from the document."
+              },
               "parameters": [
                 {
                   "id": 45,
@@ -738,6 +865,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string representing the event type to listen for."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -749,6 +879,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The function to remove from the event."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Function"
@@ -760,6 +893,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "Specifies whether the listener to be removed was registered as a capturing listener or not.\n"
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "boolean"
@@ -788,6 +924,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Removes the specified node from the parent node."
+              },
               "parameters": [
                 {
                   "id": 98,
@@ -795,6 +934,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node to remove."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -806,6 +948,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The parent node from which the node will be removed.\n"
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -834,6 +979,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Replaces a node in the parent with a new node."
+              },
               "parameters": [
                 {
                   "id": 93,
@@ -841,6 +989,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node to replace the old node with."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -852,6 +1003,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node that is being replaced."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -863,6 +1017,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The node that the current node is parented to.\n"
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Node"
@@ -1130,6 +1287,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Add a global event listener."
+              },
               "parameters": [
                 {
                   "id": 24,
@@ -1137,6 +1297,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string representing the event type to listen for."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -1148,6 +1311,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The function that receives a notification when an event of the specified type occurs."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Function"
@@ -1160,6 +1326,9 @@
                   "kindString": "Parameter",
                   "flags": {
                     "isOptional": true
+                  },
+                  "comment": {
+                    "text": "If true, useCapture indicates that the user wishes to initiate capture.\n"
                   },
                   "type": {
                     "type": "instrinct",
@@ -1189,6 +1358,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Iterate all modules loaded by the script loader."
+              },
               "parameters": [
                 {
                   "id": 17,
@@ -1196,6 +1368,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A callback that will receive each module id along with the module object. Return true to end enumeration.\n"
+                  },
                   "type": {
                     "type": "reflection",
                     "declaration": {
@@ -1267,6 +1442,9 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Remove a global event listener."
+              },
               "parameters": [
                 {
                   "id": 29,
@@ -1274,6 +1452,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "A string representing the event type to listen for."
+                  },
                   "type": {
                     "type": "instrinct",
                     "name": "string"
@@ -1285,6 +1466,9 @@
                   "kind": 32768,
                   "kindString": "Parameter",
                   "flags": {},
+                  "comment": {
+                    "text": "The function to remove from the event."
+                  },
                   "type": {
                     "type": "reference",
                     "name": "Function"
@@ -1297,6 +1481,9 @@
                   "kindString": "Parameter",
                   "flags": {
                     "isOptional": true
+                  },
+                  "comment": {
+                    "text": "Specifies whether the listener to be removed was registered as a capturing listener or not.\n"
                   },
                   "type": {
                     "type": "instrinct",

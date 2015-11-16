@@ -1,6 +1,6 @@
 {
   "name": "aurelia-pal",
-  "version": "0.3.0",
+  "version": "1.0.0-beta.1",
   "description": "Aurelia's platform abstraction layer (PAL).",
   "keywords": [
     "aurelia",
