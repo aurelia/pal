@@ -56,6 +56,13 @@ interface Feature {
 export const FEATURE: Feature = {};
 
 /**
+* The runtime's performance API.
+*/
+interface Performance {
+    now(): number;
+}
+
+/**
 * Represents the core APIs of the runtime environment.
 */
 interface Platform {
@@ -75,6 +82,15 @@ interface Platform {
   * The runtime's history API.
   */
   history: Object;
+  /**
+  * The runtime's performance API
+  */
+  performance: Performance;
+  /**
+  * Registers a function to call when the system is ready to update (repaint) the display.
+  * @param callback The function to call.
+  */
+  requestAnimationFrame(callback: (animationFrameStart: number) => void): number;
   /**
   * The runtime's XMLHttpRequest API.
   */

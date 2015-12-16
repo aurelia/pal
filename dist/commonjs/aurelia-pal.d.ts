@@ -32,6 +32,13 @@ declare module 'aurelia-pal' {
   }
   
   /**
+  * The runtime's performance API.
+  */
+  export interface Performance {
+    now(): number;
+  }
+  
+  /**
   * Represents the core APIs of the runtime environment.
   */
   export interface Platform {
@@ -55,6 +62,17 @@ declare module 'aurelia-pal' {
       * The runtime's history API.
       */
     history: Object;
+    
+    /**
+      * The runtime's performance API
+      */
+    performance: Performance;
+    
+    /**
+      * Registers a function to call when the system is ready to update (repaint) the display.
+      * @param callback The function to call.
+      */
+    requestAnimationFrame(callback: ((animationFrameStart: number) => void)): number;
     
     /**
       * The runtime's XMLHttpRequest API.

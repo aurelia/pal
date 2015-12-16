@@ -1,3 +1,11 @@
+### 1.0.0-beta.1.0.1 (2015-12-16)
+
+
+#### Features
+
+* **PAL:** requestAnimationFrame and performance APIs ([09177bff](http://github.com/aurelia/pal/commit/09177bffc52f02f9138972c44f4c0082adcad1e9))
+
+
 ### 1.0.0-beta.1 (2015-11-15)
 
 
