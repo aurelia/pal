@@ -1,3 +1,11 @@
+### 1.0.0-beta.1.0.2 (2016-01-08)
+
+
+#### Bug Fixes
+
+* **index:** remove interface methods for Object/Array observe ([d9099c9b](http://github.com/aurelia/pal/commit/d9099c9bfd1e37032e17d7ad7ed60e3fcad4aedd))
+
+
 ### 1.0.0-beta.1.0.1 (2015-12-16)
 
 

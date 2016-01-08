@@ -19,16 +19,6 @@ declare module 'aurelia-pal' {
       * Does the runtime environment support native HTMLTemplateElement?
       */
     htmlTemplateElement: boolean;
-    
-    /**
-      * Does the runtime environment support Object.observe?
-      */
-    objectObserve: boolean;
-    
-    /**
-      * Does the runtime environment support Array.observe?
-      */
-    arrayObserve: boolean;
   }
   
   /**
