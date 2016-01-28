@@ -1,3 +1,12 @@
+## 1.0.0 (2016-01-28)
+
+
+#### Features
+
+* **all:** update for jspm and update core-js ([1b636c3b](http://github.com/aurelia/pal/commit/1b636c3ba07470c34008474c6a286c5f21a75d7c))
+* **index:** add mutationObserver feature detection ([c61582f5](http://github.com/aurelia/pal/commit/c61582f5b1e37a3013c9718016042f5c23a073e3))
+
+
 ### 1.0.0-beta.1.0.2 (2016-01-08)
 
 

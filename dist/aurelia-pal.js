@@ -40,6 +40,11 @@ interface Feature {
   * Does the runtime environment support native HTMLTemplateElement?
   */
   htmlTemplateElement: boolean;
+
+  /**
+  * Does the runtime environment support native DOM mutation observers?
+  */
+  mutationObserver: boolean;
 }
 
 /**
