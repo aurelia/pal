@@ -66,7 +66,7 @@ interface Platform {
   /**
   * The runtime environment's global.
   */
-  global: Object,
+  global: any,
   /**
   * A function wich does nothing.
   */
