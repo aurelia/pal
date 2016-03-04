@@ -263,13 +263,13 @@ interface Dom {
   * @param node The node that is being replaced.
   * @param parentNode The node that the current node is parented to.
   */
-  replaceNode(newNode: Node, node: Node, parentNode: Node): void;
+  replaceNode(newNode: Node, node: Node, parentNode?: Node): void;
   /**
   * Removes the specified node from the parent node.
   * @param node The node to remove.
   * @param parentNode The parent node from which the node will be removed.
   */
-  removeNode(node: Node, parentNode: Node): void;
+  removeNode(node: Node, parentNode?: Node): void;
   /**
   * Injects styles into the destination element, or the document.head if no destination is provided.
   * @param styles The css text to injext.
