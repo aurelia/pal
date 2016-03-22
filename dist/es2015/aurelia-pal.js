@@ -1,22 +1,16 @@
-'use strict';
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.AggregateError = AggregateError;
-exports.initializePAL = initializePAL;
-function AggregateError(message, innerError, skipIfAlreadyAggregate) {
+export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
   if (innerError) {
     if (innerError.innerError && skipIfAlreadyAggregate) {
       return innerError;
     }
 
     if (innerError.stack) {
-      message += '\n------------------------------------------------\ninner error: ' + innerError.stack;
+      message += `\n------------------------------------------------\ninner error: ${ innerError.stack }`;
     }
   }
 
-  var e = new Error(message);
+  let e = new Error(message);
   if (innerError) {
     e.innerError = innerError;
   }
@@ -24,11 +18,11 @@ function AggregateError(message, innerError, skipIfAlreadyAggregate) {
   return e;
 }
 
-var FEATURE = exports.FEATURE = {};
+export const FEATURE = {};
 
-var PLATFORM = exports.PLATFORM = {
-  noop: function noop() {},
-  eachModule: function eachModule() {}
+export const PLATFORM = {
+  noop: function () {},
+  eachModule() {}
 };
 
 PLATFORM.global = function () {
@@ -43,13 +37,13 @@ PLATFORM.global = function () {
   return new Function('return this')();
 }();
 
-var DOM = exports.DOM = {};
+export const DOM = {};
 
-function initializePAL(callback) {
+export function initializePAL(callback) {
   if (typeof Object.getPropertyDescriptor !== 'function') {
     Object.getPropertyDescriptor = function (subject, name) {
-      var pd = Object.getOwnPropertyDescriptor(subject, name);
-      var proto = Object.getPrototypeOf(subject);
+      let pd = Object.getOwnPropertyDescriptor(subject, name);
+      let proto = Object.getPrototypeOf(subject);
       while (typeof pd === 'undefined' && proto !== null) {
         pd = Object.getOwnPropertyDescriptor(proto, name);
         proto = Object.getPrototypeOf(proto);

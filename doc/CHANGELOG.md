@@ -1,3 +1,12 @@
+### 1.0.0-beta.1.2.0 (2016-03-22)
+
+
+#### Bug Fixes
+
+* **dom:** mark optional parameters ([3485be0f](http://github.com/aurelia/pal/commit/3485be0f7c31451f1126828e2320c14272ef5ea1))
+* **platform:** fix type of global ([6eb6937c](http://github.com/aurelia/pal/commit/6eb6937c594dfcb150e20f82c2536e0c3d0b15d6))
+
+
 
 ## 1.0.0-beta.1.1.1 (2016-01-28)
 

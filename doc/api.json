@@ -947,7 +947,9 @@
                   "name": "parentNode",
                   "kind": 32768,
                   "kindString": "Parameter",
-                  "flags": {},
+                  "flags": {
+                    "isOptional": true
+                  },
                   "comment": {
                     "text": "The parent node from which the node will be removed.\n"
                   },
@@ -1016,7 +1018,9 @@
                   "name": "parentNode",
                   "kind": 32768,
                   "kindString": "Parameter",
-                  "flags": {},
+                  "flags": {
+                    "isOptional": true
+                  },
                   "comment": {
                     "text": "The node that the current node is parented to.\n"
                   },
@@ -1248,8 +1252,8 @@
             "shortText": "The runtime environment's global."
           },
           "type": {
-            "type": "reference",
-            "name": "Object"
+            "type": "instrinct",
+            "name": "any"
           }
         },
         {
