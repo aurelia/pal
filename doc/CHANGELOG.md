@@ -1,3 +1,11 @@
+### 1.0.0-beta.1.2.1 (2016-05-03)
+
+
+#### Bug Fixes
+
+* **AggregateError:** better surface inner error information ([d2e0ee70](http://github.com/aurelia/pal/commit/d2e0ee70ad790999e61f4d4e31341062146cbcbf))
+
+
 ### 1.0.0-beta.1.2.0 (2016-03-22)
 
 

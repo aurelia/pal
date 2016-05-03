@@ -5,9 +5,26 @@ export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
       return innerError;
     }
 
-    if (innerError.stack) {
-      message += `\n------------------------------------------------\ninner error: ${ innerError.stack }`;
+    const separator = '\n------------------------------------------------\n';
+
+    message += `${ separator }Inner Error:\n`;
+
+    if (typeof innerError === 'string') {
+      message += `Message: ${ innerError }`;
+    } else {
+      if (innerError.message) {
+        message += `Message: ${ innerError.message }`;
+      } else {
+        message += `Unknown Inner Error Type. Displaying Inner Error as JSON:\n ${ JSON.stringify(innerError, null, '  ') }`;
+      }
+
+      if (innerError.stack) {
+        message += `\nInner Error Stack:\n${ innerError.stack }`;
+        message += '\nEnd Inner Error Stack';
+      }
     }
+
+    message += separator;
   }
 
   let e = new Error(message);
