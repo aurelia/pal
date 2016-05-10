@@ -1194,6 +1194,10 @@
               "kind": 4096,
               "kindString": "Call signature",
               "flags": {},
+              "comment": {
+                "shortText": "Gets a DOMHighResTimeStamp.",
+                "returns": "The timestamp, measured in milliseconds, accurate to one thousandth of a millisecond.\n"
+              },
               "type": {
                 "type": "instrinct",
                 "name": "number"
@@ -1563,7 +1567,8 @@
               "kindString": "Call signature",
               "flags": {},
               "comment": {
-                "shortText": "Registers a function to call when the system is ready to update (repaint) the display."
+                "shortText": "Registers a function to call when the system is ready to update (repaint) the display.",
+                "returns": "A long integer value, the request id, that uniquely identifies the entry in the callback list.\n"
               },
               "parameters": [
                 {
@@ -1573,7 +1578,7 @@
                   "kindString": "Parameter",
                   "flags": {},
                   "comment": {
-                    "text": "The function to call.\n"
+                    "text": "The function to call."
                   },
                   "type": {
                     "type": "reflection",

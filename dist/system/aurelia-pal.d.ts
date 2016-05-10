@@ -30,6 +30,11 @@ declare module 'aurelia-pal' {
   * The runtime's performance API.
   */
   export interface Performance {
+    
+    /**
+      * Gets a DOMHighResTimeStamp.
+      * @return The timestamp, measured in milliseconds, accurate to one thousandth of a millisecond.
+      */
     now(): number;
   }
   
@@ -69,6 +74,7 @@ declare module 'aurelia-pal' {
     /**
       * Registers a function to call when the system is ready to update (repaint) the display.
       * @param callback The function to call.
+      * @return A long integer value, the request id, that uniquely identifies the entry in the callback list.
       */
     requestAnimationFrame(callback: ((animationFrameStart: number) => void)): number;
     
