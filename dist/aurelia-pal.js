@@ -1,3 +1,4 @@
+
 /**
 * Creates an instance of Error that aggregates and preserves an innerError.
 * @param message The error message.
