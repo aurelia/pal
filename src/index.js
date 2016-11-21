@@ -306,12 +306,16 @@ interface Dom {
 * The singleton instance of the Dom API.
 */
 export const DOM: Dom = {};
-
+export let isInitialized = false;
 /**
 * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
 * @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
 */
 export function initializePAL(callback: (platform: Platform, feature: Feature, dom: Dom) => void): void {
+  if (isInitialized) {
+    return;
+  }
+  isInitialized = true;
   if (typeof Object.getPropertyDescriptor !== 'function') {
     Object.getPropertyDescriptor = function(subject, name) {
       let pd = Object.getOwnPropertyDescriptor(subject, name);
@@ -325,4 +329,7 @@ export function initializePAL(callback: (platform: Platform, feature: Feature, d
   }
 
   callback(PLATFORM, FEATURE, DOM);
+}
+export function reset() {
+  isInitialized = false;
 }
