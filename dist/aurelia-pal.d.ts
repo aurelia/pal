@@ -58,12 +58,12 @@ export declare interface Platform {
   /**
     * The runtime's location API.
     */
-  location: Object;
+  location: typeof window.location;
   
   /**
     * The runtime's history API.
     */
-  history: Object;
+  history: typeof window.history;
   
   /**
     * The runtime's performance API
@@ -80,7 +80,7 @@ export declare interface Platform {
   /**
     * The runtime's XMLHttpRequest API.
     */
-  XMLHttpRequest: XMLHttpRequest;
+  XMLHttpRequest: typeof XMLHttpRequest;
   
   /**
     * Iterate all modules loaded by the script loader.
@@ -113,12 +113,12 @@ export declare interface Dom {
   /**
     * The global DOM Element type.
     */
-  Element: Element;
+  Element: typeof Element;
   
   /**
     * The global DOM SVGElement type.
     */
-  SVGElement: SVGElement;
+  SVGElement: typeof SVGElement;
   
   /**
     * A key representing a DOM boundary.
@@ -305,9 +305,11 @@ export declare const PLATFORM: Platform;
 * The singleton instance of the Dom API.
 */
 export declare const DOM: Dom;
+export declare let isInitialized: any;
 
 /**
 * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
 * @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
 */
 export declare function initializePAL(callback: ((platform: Platform, feature: Feature, dom: Dom) => void)): void;
+export declare function reset(): any;

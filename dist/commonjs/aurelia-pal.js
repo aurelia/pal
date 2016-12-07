@@ -5,6 +5,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.AggregateError = AggregateError;
 exports.initializePAL = initializePAL;
+exports.reset = reset;
 function AggregateError(message, innerError, skipIfAlreadyAggregate) {
   if (innerError) {
     if (innerError.innerError && skipIfAlreadyAggregate) {
@@ -61,8 +62,12 @@ PLATFORM.global = function () {
 }();
 
 var DOM = exports.DOM = {};
-
+var isInitialized = exports.isInitialized = false;
 function initializePAL(callback) {
+  if (isInitialized) {
+    return;
+  }
+  exports.isInitialized = isInitialized = true;
   if (typeof Object.getPropertyDescriptor !== 'function') {
     Object.getPropertyDescriptor = function (subject, name) {
       var pd = Object.getOwnPropertyDescriptor(subject, name);
@@ -76,4 +81,7 @@ function initializePAL(callback) {
   }
 
   callback(PLATFORM, FEATURE, DOM);
+}
+function reset() {
+  exports.isInitialized = isInitialized = false;
 }

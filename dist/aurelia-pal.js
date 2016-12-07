@@ -96,11 +96,11 @@ interface Platform {
   /**
   * The runtime's location API.
   */
-  location: Object;
+  location: typeof window.location;
   /**
   * The runtime's history API.
   */
-  history: Object;
+  history: typeof window.history;
   /**
   * The runtime's performance API
   */
@@ -114,7 +114,7 @@ interface Platform {
   /**
   * The runtime's XMLHttpRequest API.
   */
-  XMLHttpRequest: XMLHttpRequest;
+  XMLHttpRequest: typeof XMLHttpRequest;
   /**
   * Iterate all modules loaded by the script loader.
   * @param callback A callback that will receive each module id along with the module object. Return true to end enumeration.
@@ -166,11 +166,11 @@ interface Dom {
   /**
   * The global DOM Element type.
   */
-  Element: Element;
+  Element: typeof Element;
   /**
   * The global DOM SVGElement type.
   */
-  SVGElement: SVGElement;
+  SVGElement: typeof SVGElement;
   /**
   * A key representing a DOM boundary.
   */
@@ -307,12 +307,16 @@ interface Dom {
 * The singleton instance of the Dom API.
 */
 export const DOM: Dom = {};
-
+export let isInitialized = false;
 /**
 * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
 * @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
 */
 export function initializePAL(callback: (platform: Platform, feature: Feature, dom: Dom) => void): void {
+  if (isInitialized) {
+    return;
+  }
+  isInitialized = true;
   if (typeof Object.getPropertyDescriptor !== 'function') {
     Object.getPropertyDescriptor = function(subject, name) {
       let pd = Object.getOwnPropertyDescriptor(subject, name);
@@ -326,4 +330,7 @@ export function initializePAL(callback: (platform: Platform, feature: Feature, d
   }
 
   callback(PLATFORM, FEATURE, DOM);
+}
+export function reset() {
+  isInitialized = false;
 }

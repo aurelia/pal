@@ -55,8 +55,13 @@ PLATFORM.global = function () {
 }();
 
 export const DOM = {};
+export let isInitialized = false;
 
 export function initializePAL(callback) {
+  if (isInitialized) {
+    return;
+  }
+  isInitialized = true;
   if (typeof Object.getPropertyDescriptor !== 'function') {
     Object.getPropertyDescriptor = function (subject, name) {
       let pd = Object.getOwnPropertyDescriptor(subject, name);
@@ -70,4 +75,7 @@ export function initializePAL(callback) {
   }
 
   callback(PLATFORM, FEATURE, DOM);
+}
+export function reset() {
+  isInitialized = false;
 }

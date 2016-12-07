@@ -3,7 +3,7 @@
 System.register([], function (_export, _context) {
   "use strict";
 
-  var FEATURE, PLATFORM, DOM;
+  var FEATURE, PLATFORM, DOM, isInitialized;
   function AggregateError(message, innerError, skipIfAlreadyAggregate) {
     if (innerError) {
       if (innerError.innerError && skipIfAlreadyAggregate) {
@@ -43,6 +43,10 @@ System.register([], function (_export, _context) {
   _export('AggregateError', AggregateError);
 
   function initializePAL(callback) {
+    if (isInitialized) {
+      return;
+    }
+    _export('isInitialized', isInitialized = true);
     if (typeof Object.getPropertyDescriptor !== 'function') {
       Object.getPropertyDescriptor = function (subject, name) {
         var pd = Object.getOwnPropertyDescriptor(subject, name);
@@ -59,6 +63,12 @@ System.register([], function (_export, _context) {
   }
 
   _export('initializePAL', initializePAL);
+
+  function reset() {
+    _export('isInitialized', isInitialized = false);
+  }
+
+  _export('reset', reset);
 
   return {
     setters: [],
@@ -89,6 +99,10 @@ System.register([], function (_export, _context) {
       _export('DOM', DOM = {});
 
       _export('DOM', DOM);
+
+      _export('isInitialized', isInitialized = false);
+
+      _export('isInitialized', isInitialized);
     }
   };
 });
