@@ -103,6 +103,11 @@ export declare interface Platform {
     * @param capture Specifies whether the listener to be removed was registered as a capturing listener or not.
     */
   removeEventListener(eventName: string, callback: Function, capture?: boolean): void;
+  
+  /**
+     * Reference to the Loader Class (set after the loader has been first imported)
+     */
+  Loader: any;
 }
 
 /**

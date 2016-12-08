@@ -1,3 +1,13 @@
+<a name="1.1.1"></a>
+## [1.1.1](https://github.com/aurelia/pal/compare/1.1.0...v1.1.1) (2016-12-08)
+
+
+### Bug Fixes
+
+* **typings:** reference to the loader interface ([0b50caa](https://github.com/aurelia/pal/commit/0b50caa))
+
+
+
 <a name="1.1.0"></a>
 # [1.1.0](https://github.com/aurelia/pal/compare/1.0.0...v1.1.0) (2016-12-07)
 
