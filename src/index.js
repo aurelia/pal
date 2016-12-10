@@ -175,7 +175,7 @@ interface ModuleNameOptions {
 export const PLATFORM: Platform = {
   noop: function() {},
   eachModule() {},
-  moduleName(moduleName) {
+  moduleName: function moduleName(moduleName) {
     return moduleName;
   }
 };
