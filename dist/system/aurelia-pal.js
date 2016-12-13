@@ -79,7 +79,20 @@ System.register([], function (_export, _context) {
 
       _export('PLATFORM', PLATFORM = {
         noop: function noop() {},
-        eachModule: function eachModule() {}
+        eachModule: function eachModule() {},
+        moduleName: function (_moduleName) {
+          function moduleName(_x) {
+            return _moduleName.apply(this, arguments);
+          }
+
+          moduleName.toString = function () {
+            return _moduleName.toString();
+          };
+
+          return moduleName;
+        }(function (moduleName) {
+          return moduleName;
+        })
       });
 
       _export('PLATFORM', PLATFORM);

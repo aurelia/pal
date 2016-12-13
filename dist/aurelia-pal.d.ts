@@ -108,6 +108,43 @@ export declare interface Platform {
      * Reference to the Loader Class (set after the loader has been first imported)
      */
   Loader: any;
+  
+  /**
+     * Resolves a module name to a path resolvable by the loader. By default returns the first parameter.
+     * It is recommended to use this for all dynamic imports as it enables static analysis
+     * and optionally allows adding custom metadata used by the build step.
+     *
+     * References to this method should always literally call `PLATFORM.moduleName(...)`.
+     * This enables the build step to statically optimize the code by replacing the reference with a string.
+     *
+     * @param moduleName Absolute or relative path to the module.
+     * @param options Optional options used during the static analysis that inform how to process the module.
+     */
+  moduleName(moduleName: string, options?: ModuleNameOptions): string;
+}
+
+/**
+ * Options used during the static analysis that inform how to process a given module.
+ */
+/**
+ * Options used during the static analysis that inform how to process a given module.
+ */
+export declare interface ModuleNameOptions {
+  
+  /**
+     * Use code-splitting by separating out the requested module into its own file
+     */
+  lazy?: boolean;
+  
+  /**
+     * Add the module to a chunk by name
+     */
+  chunk?: string;
+  
+  /**
+     * When provided, use a RegExp instead of the moduleName during static analysis
+     */
+  moduleRegex?: RegExp;
 }
 
 /**

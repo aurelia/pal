@@ -46,7 +46,20 @@ var FEATURE = exports.FEATURE = {};
 
 var PLATFORM = exports.PLATFORM = {
   noop: function noop() {},
-  eachModule: function eachModule() {}
+  eachModule: function eachModule() {},
+  moduleName: function (_moduleName) {
+    function moduleName(_x) {
+      return _moduleName.apply(this, arguments);
+    }
+
+    moduleName.toString = function () {
+      return _moduleName.toString();
+    };
+
+    return moduleName;
+  }(function (moduleName) {
+    return moduleName;
+  })
 };
 
 PLATFORM.global = function () {

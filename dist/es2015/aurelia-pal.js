@@ -38,8 +38,11 @@ export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
 export const FEATURE = {};
 
 export const PLATFORM = {
-  noop: function () {},
-  eachModule() {}
+  noop() {},
+  eachModule() {},
+  moduleName(moduleName) {
+    return moduleName;
+  }
 };
 
 PLATFORM.global = function () {
