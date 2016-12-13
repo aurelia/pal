@@ -141,10 +141,10 @@ interface Platform {
    * Resolves a module name to a path resolvable by the loader. By default returns the first parameter.
    * It is recommended to use this for all dynamic imports as it enables static analysis
    * and optionally allows adding custom metadata used by the build step.
-   * 
+   *
    * References to this method should always literally call `PLATFORM.moduleName(...)`.
-   * This enables the build step to statically optimize the code by replacing the reference with a string. 
-   * 
+   * This enables the build step to statically optimize the code by replacing the reference with a string.
+   *
    * @param moduleName Absolute or relative path to the module.
    * @param options Optional options used during the static analysis that inform how to process the module.
    */
@@ -173,9 +173,9 @@ interface ModuleNameOptions {
 * The singleton instance of the Platform API.
 */
 export const PLATFORM: Platform = {
-  noop: function() {},
+  noop() {},
   eachModule() {},
-  moduleName: function moduleName(moduleName) {
+  moduleName(moduleName) {
     return moduleName;
   }
 };
