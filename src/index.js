@@ -149,6 +149,7 @@ interface Platform {
    * @param options Optional options used during the static analysis that inform how to process the module.
    */
   moduleName(moduleName: string, options?: ModuleNameOptions): string;
+  moduleName(moduleName: string, chunk?: string): string;
 }
 
 /**
