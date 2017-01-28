@@ -156,17 +156,13 @@ interface Platform {
  */
 interface ModuleNameOptions {
   /**
-   * Use code-splitting by separating out the requested module into its own file
-   */
-  lazy?: boolean;
-  /**
    * Add the module to a chunk by name
    */
   chunk?: string;
   /**
-   * When provided, use a RegExp instead of the moduleName during static analysis
+   * Optionally declare which exports are used. This enables tree-shaking when only few out of many exports are used.
    */
-  moduleRegex?: RegExp;
+  exports?: string[];
 }
 
 /**
