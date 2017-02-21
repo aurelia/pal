@@ -1,3 +1,18 @@
+<a name="1.3.0"></a>
+# [1.3.0](https://github.com/aurelia/pal/compare/1.2.0...v1.3.0) (2017-02-21)
+
+
+### Bug Fixes
+
+* **build:** declare ModuleNameOptions as it's understood by the new Webpack plugin ([2cf136b](https://github.com/aurelia/pal/commit/2cf136b))
+
+
+### Features
+
+* **typings:** add shorthand for moduleName's second parameter ([41f0926](https://github.com/aurelia/pal/commit/41f0926))
+
+
+
 <a name="1.2.0"></a>
 # [1.2.0](https://github.com/aurelia/pal/compare/1.1.1...v1.2.0) (2016-12-13)
 
