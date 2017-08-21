@@ -266,6 +266,11 @@ interface Dom {
   */
   createDocumentFragment(): DocumentFragment;
   /**
+  * Creates a new HTMLTemplateElement.
+  * @return An HTMLTemplateElement.
+  */
+  createTemplateElement(): HTMLTemplateElement
+  /**
   * Creates a new MutationObserver.
   * @param callback A callback that will recieve the change records with the mutations.
   * @return A MutationObservere.
