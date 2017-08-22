@@ -1,3 +1,19 @@
+<a name="1.4.0"></a>
+# [1.4.0](https://github.com/aurelia/pal/compare/1.3.0...v1.4.0) (2017-08-22)
+
+
+### Bug Fixes
+
+* **index:** add missing semicolon ([f5336ab](https://github.com/aurelia/pal/commit/f5336ab))
+
+
+### Features
+
+* **dom:** add createAttribute function ([a785008](https://github.com/aurelia/pal/commit/a785008))
+* **dom:** add createTemplateElement ([03ae1cc](https://github.com/aurelia/pal/commit/03ae1cc))
+
+
+
 <a name="1.3.0"></a>
 # [1.3.0](https://github.com/aurelia/pal/compare/1.2.0...v1.3.0) (2017-02-21)
 
