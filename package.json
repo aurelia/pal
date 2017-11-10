@@ -26,6 +26,7 @@
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.0.2",
     "karma-jspm": "^2.2.0",
+    "tslint": "^5.8.0",
     "typescript": "^2.6.1"
   },
 
@@ -40,7 +41,9 @@
     "prebuild:native-modules": "rimraf dist/native-modules",
     "build:native-modules": "tsc -m ESNext --outDir dist/native-modules",
     "prebuild:es2015": "rimraf dist/es2015",
-    "build:es2015": "tsc -m ES2015 -t ES2015 --outDir dist/es2015"
+    "build:es2015": "tsc -m ES2015 -t ES2015 --outDir dist/es2015",
+
+    "lint": "tslint -p tsconfig.json"
   },
 
   "aurelia": {
