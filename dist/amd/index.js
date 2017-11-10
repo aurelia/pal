@@ -2,12 +2,12 @@ define(["require", "exports"], function (require, exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     /**
-    * Creates an instance of Error that aggregates and preserves an innerError.
-    * @param message The error message.
-    * @param innerError The inner error message to aggregate.
-    * @param skipIfAlreadyAggregate Indicates to not wrap the inner error if it itself already has an innerError.
-    * @return The Error instance.
-    */
+     * Creates an instance of Error that aggregates and preserves an innerError.
+     * @param message The error message.
+     * @param innerError The inner error message to aggregate.
+     * @param skipIfAlreadyAggregate Indicates to not wrap the inner error if it itself already has an innerError.
+     * @return The Error instance.
+     */
     function AggregateError(message, innerError, skipIfAlreadyAggregate) {
         if (innerError) {
             if (innerError.innerError && skipIfAlreadyAggregate) {
@@ -23,6 +23,7 @@ define(["require", "exports"], function (require, exports) {
                     message += "Message: " + innerError.message;
                 }
                 else {
+                    // tslint:disable-next-line max-line-length
                     message += "Unknown Inner Error Type. Displaying Inner Error as JSON:\n " + JSON.stringify(innerError, null, '  ');
                 }
                 if (innerError.stack) {
@@ -40,19 +41,21 @@ define(["require", "exports"], function (require, exports) {
     }
     exports.AggregateError = AggregateError;
     /**
-    * The singleton instance of the Feature discovery API.
-    */
-    exports.FEATURE = {}; // HACK: `FEATURE` actually gets initialized during bootstrap but for all practical purposes we consider it as `Feature`.
+     * The singleton instance of the Feature discovery API.
+     */
+    exports.FEATURE = {}; // HACK: `FEATURE` actually gets initialized during bootstrap
     /**
-    * The singleton instance of the Platform API.
-    */
+     * The singleton instance of the Platform API.
+     */
     exports.PLATFORM = {
         noop: function () { },
         eachModule: function () { },
         moduleName: function (moduleName) {
             return moduleName;
         }
-    };
+    }; // HACK: `PLATFORM` actually gets initialized during bootstrap
+    // but for all practical purposes we consider it as <Platform>.
+    // tslint:disable-next-line only-arrow-functions
     exports.PLATFORM.global = (function () {
         // Workers don’t have `window`, only `self`
         if (typeof self !== 'undefined') {
@@ -66,14 +69,16 @@ define(["require", "exports"], function (require, exports) {
         return new Function('return this')();
     })();
     /**
-    * The singleton instance of the Dom API.
-    */
-    exports.DOM = {}; // HACK: `DOM` actually gets initialized during bootstrap but for all practical purposes we consider it as `Dom`.
+     * The singleton instance of the Dom API.
+     */
+    exports.DOM = {}; // HACK: `DOM` actually gets initialized during bootstrap
+    // but for all practical purposes we consider it as `Dom`.
     exports.isInitialized = false;
     /**
-    * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
-    * @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
-    */
+     * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
+     * @param callback Allows providing a callback which configures the three PAL singletons
+     *                 with their platform-specific implementations.
+     */
     function initializePAL(callback) {
         if (exports.isInitialized) {
             return;

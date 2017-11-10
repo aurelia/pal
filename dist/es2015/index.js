@@ -1,10 +1,10 @@
 /**
-* Creates an instance of Error that aggregates and preserves an innerError.
-* @param message The error message.
-* @param innerError The inner error message to aggregate.
-* @param skipIfAlreadyAggregate Indicates to not wrap the inner error if it itself already has an innerError.
-* @return The Error instance.
-*/
+ * Creates an instance of Error that aggregates and preserves an innerError.
+ * @param message The error message.
+ * @param innerError The inner error message to aggregate.
+ * @param skipIfAlreadyAggregate Indicates to not wrap the inner error if it itself already has an innerError.
+ * @return The Error instance.
+ */
 export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
     if (innerError) {
         if (innerError.innerError && skipIfAlreadyAggregate) {
@@ -20,6 +20,7 @@ export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
                 message += `Message: ${innerError.message}`;
             }
             else {
+                // tslint:disable-next-line max-line-length
                 message += `Unknown Inner Error Type. Displaying Inner Error as JSON:\n ${JSON.stringify(innerError, null, '  ')}`;
             }
             if (innerError.stack) {
@@ -29,26 +30,28 @@ export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
         }
         message += separator;
     }
-    let e = new Error(message);
+    const e = new Error(message);
     if (innerError) {
         e.innerError = innerError;
     }
     return e;
 }
 /**
-* The singleton instance of the Feature discovery API.
-*/
-export const FEATURE = {}; // HACK: `FEATURE` actually gets initialized during bootstrap but for all practical purposes we consider it as `Feature`.
+ * The singleton instance of the Feature discovery API.
+ */
+export const FEATURE = {}; // HACK: `FEATURE` actually gets initialized during bootstrap
 /**
-* The singleton instance of the Platform API.
-*/
+ * The singleton instance of the Platform API.
+ */
 export const PLATFORM = {
     noop() { },
     eachModule() { },
     moduleName(moduleName) {
         return moduleName;
     }
-};
+}; // HACK: `PLATFORM` actually gets initialized during bootstrap
+// but for all practical purposes we consider it as <Platform>.
+// tslint:disable-next-line only-arrow-functions
 PLATFORM.global = (function () {
     // Workers don’t have `window`, only `self`
     if (typeof self !== 'undefined') {
@@ -62,21 +65,23 @@ PLATFORM.global = (function () {
     return new Function('return this')();
 })();
 /**
-* The singleton instance of the Dom API.
-*/
-export const DOM = {}; // HACK: `DOM` actually gets initialized during bootstrap but for all practical purposes we consider it as `Dom`.
+ * The singleton instance of the Dom API.
+ */
+export const DOM = {}; // HACK: `DOM` actually gets initialized during bootstrap
+// but for all practical purposes we consider it as `Dom`.
 export let isInitialized = false;
 /**
-* Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
-* @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
-*/
+ * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
+ * @param callback Allows providing a callback which configures the three PAL singletons
+ *                 with their platform-specific implementations.
+ */
 export function initializePAL(callback) {
     if (isInitialized) {
         return;
     }
     isInitialized = true;
     if (typeof Object.getPropertyDescriptor !== 'function') {
-        Object.getPropertyDescriptor = function (subject, name) {
+        Object.getPropertyDescriptor = (subject, name) => {
             let pd = Object.getOwnPropertyDescriptor(subject, name);
             let proto = Object.getPrototypeOf(subject);
             while (typeof pd === 'undefined' && proto !== null) {
