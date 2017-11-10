@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "amd",
+
+    "moduleResolution": "node",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+
+    "skipLibCheck": true,
+
+    "outDir": "dist/amd",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "experimentalDecorators": true
+  }
+}

@@ -1,4 +1,3 @@
-
 /**
 * Creates an instance of Error that aggregates and preserves an innerError.
 * @param message The error message.
@@ -6,7 +5,7 @@
 * @param skipIfAlreadyAggregate Indicates to not wrap the inner error if it itself already has an innerError.
 * @return The Error instance.
 */
-export function AggregateError(message: string, innerError?: Error, skipIfAlreadyAggregate?: boolean): Error {
+export function AggregateError(message: string, innerError?: Error & { innerError?: Error }, skipIfAlreadyAggregate?: boolean): Error {
   if (innerError) {
     if (innerError.innerError && skipIfAlreadyAggregate) {
       return innerError;
@@ -34,7 +33,7 @@ export function AggregateError(message: string, innerError?: Error, skipIfAlread
     message += separator;
   }
 
-  let e = new Error(message);
+  let e: Error & { innerError?: Error } = new Error(message);
   if (innerError) {
     e.innerError = innerError;
   }
@@ -45,7 +44,7 @@ export function AggregateError(message: string, innerError?: Error, skipIfAlread
 /**
 * Enables discovery of what features the runtime environment supports.
 */
-interface Feature {
+export interface Feature {
   /**
   * Does the runtime environment support ShadowDOM?
   */
@@ -68,12 +67,12 @@ interface Feature {
 /**
 * The singleton instance of the Feature discovery API.
 */
-export const FEATURE: Feature = {};
+export const FEATURE: Feature = <any>{};  // HACK: `FEATURE` actually gets initialized during bootstrap but for all practical purposes we consider it as `Feature`.
 
 /**
 * The runtime's performance API.
 */
-interface Performance {
+export interface Performance {
   /**
   * Gets a DOMHighResTimeStamp.
   * @return The timestamp, measured in milliseconds, accurate to one thousandth of a millisecond.
@@ -84,7 +83,7 @@ interface Performance {
 /**
 * Represents the core APIs of the runtime environment.
 */
-interface Platform {
+export interface Platform {
   /**
   * The runtime environment's global.
   */
@@ -156,7 +155,7 @@ interface Platform {
 /**
  * Options used during the static analysis that inform how to process a given module.
  */
-interface ModuleNameOptions {
+export interface ModuleNameOptions {
   /**
    * Add the module to a chunk by name
    */
@@ -170,10 +169,10 @@ interface ModuleNameOptions {
 /**
 * The singleton instance of the Platform API.
 */
-export const PLATFORM: Platform = {
+export const PLATFORM: Platform = <any>{  // HACK: `PLATFORM` actually gets initialized during bootstrap but for all practical purposes we consider it as <Platform>.
   noop() {},
   eachModule() {},
-  moduleName(moduleName) {
+  moduleName(moduleName: string) {
     return moduleName;
   }
 };
@@ -196,7 +195,7 @@ PLATFORM.global = (function() {
 /**
 * Represents the core APIs of the DOM.
 */
-interface Dom {
+export interface Dom {
   /**
   * The global DOM Element type.
   */
@@ -351,8 +350,9 @@ interface Dom {
 /**
 * The singleton instance of the Dom API.
 */
-export const DOM: Dom = {};
+export const DOM: Dom = <any>{};  // HACK: `DOM` actually gets initialized during bootstrap but for all practical purposes we consider it as `Dom`.
 export let isInitialized = false;
+
 /**
 * Enables initializing a specific implementation of the Platform Abstraction Layer (PAL).
 * @param callback Allows providing a callback which configures the three PAL singletons with their platform-specific implementations.
@@ -362,8 +362,8 @@ export function initializePAL(callback: (platform: Platform, feature: Feature, d
     return;
   }
   isInitialized = true;
-  if (typeof Object.getPropertyDescriptor !== 'function') {
-    Object.getPropertyDescriptor = function(subject, name) {
+  if (typeof (Object as any).getPropertyDescriptor !== 'function') {
+    (Object as any).getPropertyDescriptor = function(subject: object, name: string) {
       let pd = Object.getOwnPropertyDescriptor(subject, name);
       let proto = Object.getPrototypeOf(subject);
       while (typeof pd === 'undefined' && proto !== null) {
@@ -376,6 +376,7 @@ export function initializePAL(callback: (platform: Platform, feature: Feature, d
 
   callback(PLATFORM, FEATURE, DOM);
 }
+
 export function reset() {
   isInitialized = false;
 }
