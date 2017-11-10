@@ -13,7 +13,7 @@
   "license": "MIT",
   "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
   "main": "dist/commonjs/index.js",
-  "typings": "dist/index.d.ts",
+  "typings": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "http://github.com/aurelia/pal"
@@ -30,13 +30,16 @@
   },
 
   "scripts": {
-    "clean": "rimraf dist/*",
-    "prebuild": "npm run clean",
-    "build": "npm run build:amd && npm run build:commonjs && npm run build:system && npm run build:native && npm run build:es2015",
-    "build:amd": "tsc -m AMD --outDir dist/amd -d --declarationDir dist",
+    "build": "npm run build:amd & npm run build:commonjs & npm run build:system & npm run build:native-modules & npm run build:es2015",
+    "prebuild:amd": "rimraf dist/amd dist/types",
+    "build:amd": "tsc -m AMD --outDir dist/amd -d --declarationDir dist/types",
+    "prebuild:commonjs": "rimraf dist/commonjs",
     "build:commonjs": "tsc -m CommonJS --outDir dist/commonjs",
+    "prebuild:system": "rimraf dist/system",
     "build:system": "tsc -m System --outDir dist/system",
-    "build:native": "tsc -m ESNext --outDir dist/native-modules",
+    "prebuild:native-modules": "rimraf dist/native-modules",
+    "build:native-modules": "tsc -m ESNext --outDir dist/native-modules",
+    "prebuild:es2015": "rimraf dist/es2015",
     "build:es2015": "tsc -m ES2015 -t ES2015 --outDir dist/es2015"
   },
 
