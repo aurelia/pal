@@ -22,13 +22,14 @@
     "conventional-changelog-cli": "^1.3.4",
     "rimraf": "^2.6.2",
     "@types/jasmine": "^2.6.3",
-    "jasmine-core": "^2.4.1",
-    "karma": "^1.1.2",
-    "karma-chrome-launcher": "^1.0.1",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
     "karma-coverage": "^1.1.1",
     "karma-jasmine": "^1.1.0",
     "karma-typescript": "^3.0.8",
     "tslint": "^5.8.0",
+    "typedoc": "0.8.0",
     "typescript": "^2.6.1"
   },
 
@@ -49,6 +50,10 @@
 
     "test": "karma start --single-run",
     "test-watch": "karma start",
+
+    "predoc": "rimraf doc/api.json && rimraf doc/temp && tsc -m AMD --outFile doc/temp/index.js -d && node doc/shape-defs",
+    "doc": "typedoc --json doc/api.json --excludeExternals --includeDeclarations --mode modules --name aurelia-pal doc/temp/index.d.ts",
+    "postdoc": "node doc/shape-doc && rimraf doc/temp",
 
     "changelog": "conventional-changelog -p angular -i doc/CHANGELOG.md -s",
     "bump-version": "npm --no-git-tag-version version",
