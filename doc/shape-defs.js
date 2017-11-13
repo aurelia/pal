@@ -36,7 +36,7 @@ try {
   // remove "export *"
   defs = defs.replace(/^\s+export \*.*;$/gm, '');
   // add "declare" before exported member declaration
-  defs = defs.replace(/^(\s+export\s*)(?!\s*interface)/gm, '$1declare ');
+  defs = defs.replace(/^(\s+export\s+)(?!\s*interface)/gm, '$1declare ');
 
   // write imports
   for (let packageName in packages) {
