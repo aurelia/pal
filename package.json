@@ -29,6 +29,7 @@
     "karma-jasmine": "^1.1.0",
     "karma-typescript": "^3.0.8",
     "tslint": "^5.8.0",
+    "tslint-language-service": "^0.9.6",
     "typedoc": "0.8.0",
     "typescript": "^2.6.1"
   },
