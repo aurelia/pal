@@ -12,12 +12,62 @@
   },
   "license": "MIT",
   "author": "Rob Eisenberg <rob@bluespire.com> (http://robeisenberg.com/)",
-  "main": "dist/commonjs/aurelia-pal.js",
-  "typings": "dist/aurelia-pal.d.ts",
+  "main": "dist/commonjs/index.js",
+  "typings": "dist/types/index.d.ts",
   "repository": {
     "type": "git",
     "url": "http://github.com/aurelia/pal"
   },
+  "devDependencies": {
+    "conventional-changelog-cli": "^1.3.4",
+    "rimraf": "^2.6.2",
+    "@types/jasmine": "^2.6.3",
+    "jasmine-core": "^2.8.0",
+    "karma": "^1.7.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-coverage": "^1.1.1",
+    "karma-jasmine": "^1.1.0",
+    "karma-typescript": "^3.0.8",
+    "tslint": "^5.8.0",
+    "tslint-language-service": "^0.9.6",
+    "typedoc": "0.8.0",
+    "typescript": "^2.6.1"
+  },
+
+  "scripts": {
+    "build": "npm run build:amd & npm run build:commonjs & npm run build:system & npm run build:native-modules & npm run build:es2015",
+    "prebuild:amd": "rimraf dist/amd dist/types",
+    "build:amd": "tsc -m AMD --outDir dist/amd -d --declarationDir dist/types",
+    "prebuild:commonjs": "rimraf dist/commonjs",
+    "build:commonjs": "tsc -m CommonJS --outDir dist/commonjs",
+    "prebuild:system": "rimraf dist/system",
+    "build:system": "tsc -m System --outDir dist/system",
+    "prebuild:native-modules": "rimraf dist/native-modules",
+    "build:native-modules": "tsc -m ESNext --outDir dist/native-modules",
+    "prebuild:es2015": "rimraf dist/es2015",
+    "build:es2015": "tsc -m ES2015 -t ES2015 --outDir dist/es2015",
+
+    "lint": "tslint -p tsconfig.json",
+
+    "test": "karma start --single-run",
+    "test-watch": "karma start",
+
+    "predoc": "rimraf doc/api.json && rimraf doc/temp && tsc -m AMD --outFile doc/temp/index.js -d && node doc/shape-defs",
+    "doc": "typedoc --json doc/api.json --excludeExternals --includeDeclarations --mode modules --name aurelia-pal doc/temp/index.d.ts",
+    "postdoc": "node doc/shape-doc && rimraf doc/temp",
+
+    "changelog": "conventional-changelog -p angular -i doc/CHANGELOG.md -s",
+    "bump-version": "npm --no-git-tag-version version",
+    "precut-release": "npm run test",
+    "cut-release": "npm run changelog && npm run build && npm run doc"
+  },
+
+  "aurelia": {
+    "documentation": {
+      "articles": []
+    }
+  },
+
   "jspm": {
     "registry": "npm",
     "jspmPackage": true,
@@ -25,62 +75,6 @@
     "format": "amd",
     "directories": {
       "dist": "dist/amd"
-    },
-    "devDependencies": {
-      "babel": "npm:babel-core@^5.8.22",
-      "babel-runtime": "npm:babel-runtime@^5.8.20",
-      "core-js": "npm:core-js@^2.0.3"
-    }
-  },
-  "devDependencies": {
-    "aurelia-tools": "^0.2.4",
-    "babel-dts-generator": "^0.6.1",
-    "babel-eslint": "^6.1.2",
-    "babel-plugin-syntax-flow": "^6.8.0",
-    "babel-plugin-transform-decorators-legacy": "^1.3.4",
-    "babel-plugin-transform-es2015-modules-amd": "^6.8.0",
-    "babel-plugin-transform-es2015-modules-commonjs": "^6.11.5",
-    "babel-plugin-transform-es2015-modules-systemjs": "^6.11.6",
-    "babel-plugin-transform-flow-strip-types": "^6.8.0",
-    "babel-preset-es2015": "^6.9.0",
-    "babel-preset-es2015-loose": "^7.0.0",
-    "babel-preset-es2015-loose-native-modules": "^1.0.0",
-    "babel-preset-stage-1": "^6.5.0",
-    "del": "^2.2.1",
-    "eslint": "^3.1.1",
-    "gulp": "^3.9.1",
-    "gulp-babel": "^6.1.2",
-    "gulp-bump": "^2.2.0",
-    "gulp-concat": "^2.6.0",
-    "gulp-conventional-changelog": "^1.1.0",
-    "gulp-eslint": "^3.0.1",
-    "gulp-ignore": "^2.0.1",
-    "gulp-insert": "^0.5.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-typedoc": "^2.0.0",
-    "gulp-typescript": "^2.13.6",
-    "gulp-util": "^3.0.7",
-    "jasmine-core": "^2.4.1",
-    "karma": "^1.1.2",
-    "karma-babel-preprocessor": "^6.0.1",
-    "karma-chrome-launcher": "^1.0.1",
-    "karma-coverage": "^1.1.1",
-    "karma-jasmine": "^1.0.2",
-    "karma-jspm": "^2.2.0",
-    "merge2": "^1.0.2",
-    "object.assign": "^4.0.4",
-    "require-dir": "^0.3.0",
-    "run-sequence": "^1.2.2",
-    "through2": "^2.0.1",
-    "typedoc": "^0.4.4",
-    "typescript": "^1.9.0-dev.20160622-1.0",
-    "vinyl": "^1.1.1",
-    "vinyl-paths": "^2.1.0",
-    "yargs": "^4.8.1"
-  },
-  "aurelia": {
-    "documentation": {
-      "articles": []
     }
   }
 }

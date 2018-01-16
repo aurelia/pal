@@ -1,0 +1,29 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+
+    "moduleResolution": "node",
+    "lib": [
+      "es2017",
+      "dom"
+    ],
+
+    "skipLibCheck": true,
+
+    "outDir": "dist/amd",
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "experimentalDecorators": true,
+
+    "plugins": [
+      { "name": "tslint-language-service" }
+    ]
+  }
+}
