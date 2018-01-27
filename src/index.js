@@ -125,14 +125,14 @@ interface Platform {
   * @param callback The function that receives a notification when an event of the specified type occurs.
   * @param capture If true, useCapture indicates that the user wishes to initiate capture.
   */
-  addEventListener(eventName: string, callback: Function, capture?: boolean): void;
+  addEventListener(eventName: string, callback: EventListenerOrEventListenerObject, capture?: boolean): void;
   /**
   * Remove a global event listener.
   * @param eventName A string representing the event type to listen for.
   * @param callback The function to remove from the event.
   * @param capture Specifies whether the listener to be removed was registered as a capturing listener or not.
   */
-  removeEventListener(eventName: string, callback: Function, capture?: boolean): void;
+  removeEventListener(eventName: string, callback: EventListenerOrEventListenerObject, capture?: boolean): void;
   /**
    * Reference to the Loader Class (set after the loader has been first imported)
    */
@@ -219,17 +219,17 @@ interface Dom {
   /**
   * Add an event listener to the document.
   * @param eventName A string representing the event type to listen for.
-  * @param callback The function that receives a notification when an event of the specified type occurs.
+  * @param callback The function or listener object that receives a notification when an event of the specified type occurs.
   * @param capture If true, useCapture indicates that the user wishes to initiate capture.
   */
-  addEventListener(eventName: string, callback: Function, capture: boolean): void;
+  addEventListener(eventName: string, callback: EventListenerOrEventListenerObject, capture: boolean): void;
   /**
   * Remove an event listener from the document.
   * @param eventName A string representing the event type to listen for.
-  * @param callback The function to remove from the event.
+  * @param callback The function or listener object to remove from the event.
   * @param capture Specifies whether the listener to be removed was registered as a capturing listener or not.
   */
-  removeEventListener(eventName: string, callback: Function, capture: boolean): void;
+  removeEventListener(eventName: string, callback: EventListenerOrEventListenerObject, capture: boolean): void;
   /**
   * Adopts a node from an external document.
   * @param node The node to be adopted.
@@ -241,7 +241,8 @@ interface Dom {
   * @param tagName A string that specifies the type of element to be created.
   * @return The created element.
   */
-  createElement(tagName: string): Element;
+  createElement<T extends HTMLElementTagNameMap>(tagName: T): HTMLElementTagNameMap<T>;
+  createElement(tagName: string): HTMLElement;
   /**
   * Creates the specified HTML attribute
   * @param name A string that specifies the name of attribute to be created.
@@ -282,7 +283,7 @@ interface Dom {
   * @param options An options object specifying bubbles:boolean, cancelable:boolean and/or detail:Object information.
   * @return A CustomEvent.
   */
-  createCustomEvent(eventType: string, options: Object): CustomEvent;
+  createCustomEvent<T = any>(eventType: string, options?: CustomEventInit<T>): CustomEvent<T>;
   /**
   * Dispatches an event on the document.
   * @param evt The event to dispatch.
@@ -301,11 +302,21 @@ interface Dom {
   */
   getElementById(id: string): Element;
   /**
+  * Performs a query selector on the document and returns first matched element, depth first.
+  * @param query The query to use in searching the document.
+  * @return A list of all matched elements in the document.
+  */
+  querySelector<K extends keyof HTMLElementTagNameMap>(selectors: K): HTMLElementTagNameMap[K] | null;
+  querySelector<K extends keyof SVGElementTagNameMap>(selectors: K): SVGElementTagNameMap[K] | null;
+  querySelector<E extends Element = Element>(selectors: string): E | null;
+  /**
   * Performs a query selector on the document and returns all located matches.
   * @param query The query to use in searching the document.
   * @return A list of all matched elements in the document.
   */
-  querySelectorAll(query: string): NodeList;
+  querySelectorAll<K extends keyof HTMLElementTagNameMap>(selectors: K): NodeListOf<HTMLElementTagNameMap[K]>;
+  querySelectorAll<K extends keyof SVGElementTagNameMap>(selectors: K): NodeListOf<SVGElementTagNameMap[K]>;
+  querySelectorAll<E extends Element = Element>(selectors: string): NodeListOf<E>;
   /**
   * Gets the element that is the next sibling of the provided element.
   * @param element The element whose next sibling is being located.
@@ -317,7 +328,7 @@ interface Dom {
   * @param markup A string containing the markup to turn into a template. Note: This string must contain the template element as well.
   * @return The instance of HTMLTemplateElement that was created from the provided markup.
   */
-  createTemplateFromMarkup(markup: string): Element;
+  createTemplateFromMarkup(markup: string): HTMLTemplateElement;
   /**
   * Appends a node to the parent, if provided, or the document.body otherwise.
   * @param newNode The node to append.
