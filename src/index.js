@@ -344,7 +344,7 @@ interface Dom {
   * @param prepend Indicates whether or not the styles should be prepended to the destination. By default they are appended.
   * @return The Style node that was created.
   */
-  injectStyles(styles: string, destination?: Element, prepend?:boolean): Node;
+  injectStyles(styles: string, destination?: Element, prepend?: boolean, id?: string): Node;
 }
 
 /**

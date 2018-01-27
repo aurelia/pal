@@ -1,3 +1,10 @@
+<a name="1.5.0"></a>
+# [1.5.0](https://github.com/aurelia/pal/compare/1.4.0...v1.5.0) (2018-01-27)
+
+### Features
+
+* **dom**: Enable injectStyles to replace the contents of an existing style element by id.
+
 <a name="1.4.0"></a>
 # [1.4.0](https://github.com/aurelia/pal/compare/1.3.0...v1.4.0) (2017-08-22)
 
