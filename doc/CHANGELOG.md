@@ -1,3 +1,15 @@
+<a name="1.6.0"></a>
+# [1.6.0](https://github.com/aurelia/pal/compare/1.5.0...v1.6.0) (2018-03-03)
+
+### Features
+
+* **dom:** add NodeList to global ([701dc34](https://github.com/aurelia/pal/commit/701dc34))
+
+### Bug Fixes
+
+* **index:** Fixed missing injectStyles param description ([8b0204d](https://github.com/aurelia/pal/commit/8b0204d))
+
+
 <a name="1.5.0"></a>
 # [1.5.0](https://github.com/aurelia/pal/compare/1.4.0...v1.5.0) (2018-01-27)
 

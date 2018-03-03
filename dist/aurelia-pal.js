@@ -202,6 +202,10 @@ interface Dom {
   */
   Element: typeof Element;
   /**
+  * The global DOM NodeList type.
+  */
+  NodeList: typeof NodeList;
+  /**
   * The global DOM SVGElement type.
   */
   SVGElement: typeof SVGElement;
@@ -343,6 +347,7 @@ interface Dom {
   * @param styles The css text to injext.
   * @param destination The destination element to inject the css text into. If not specified it will default to the document.head.
   * @param prepend Indicates whether or not the styles should be prepended to the destination. By default they are appended.
+  * @param id The existing style element's id to replace the contents for
   * @return The Style node that was created.
   */
   injectStyles(styles: string, destination?: Element, prepend?: boolean, id?: string): Node;
