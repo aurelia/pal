@@ -199,7 +199,11 @@ interface Dom {
   /**
   * The global DOM Element type.
   */
-  Element: typeof Element;
+  Element: typeof Element;  
+  /**
+  * The global DOM NodeList type.
+  */
+  NodeList: typeof NodeList;
   /**
   * The global DOM SVGElement type.
   */
