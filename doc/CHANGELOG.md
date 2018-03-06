@@ -1,3 +1,13 @@
+<a name="1.7.0"></a>
+# [1.7.0](https://github.com/aurelia/pal/compare/1.6.0...v1.7.0) (2018-03-06)
+
+
+### Features
+
+* **performance:** update to the performance API ([c5adba7](https://github.com/aurelia/pal/commit/c5adba7))
+
+
+
 <a name="1.6.0"></a>
 # [1.6.0](https://github.com/aurelia/pal/compare/1.5.0...v1.6.0) (2018-03-03)
 
