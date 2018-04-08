@@ -35,7 +35,7 @@ export declare interface Performance {
     * @return The timestamp, measured in milliseconds, accurate to one thousandth of a millisecond.
     */
   now(): number;
-  
+
   /**
      * Removes the given mark from the browser's performance entry buffer.
      *
@@ -43,7 +43,7 @@ export declare interface Performance {
      * @memberof IPerformance
      */
   clearMarks(markName?: string): void;
-  
+
   /**
      * Removes the given measure from the browser's performance entry buffer.
      *
@@ -51,7 +51,7 @@ export declare interface Performance {
      * @memberof IPerformance
      */
   clearMeasures(measureName?: string): void;
-  
+
   /**
      * Returns a list of PerformanceEntry objects based on the given name and entry type.
      *
@@ -61,7 +61,7 @@ export declare interface Performance {
      * @memberof IPerformance
      */
   getEntriesByName(name: string, entryType?: string): any;
-  
+
   /**
      * Returns a list of PerformanceEntry objects of the given entry type.
      *
@@ -70,7 +70,7 @@ export declare interface Performance {
      * @memberof IPerformance
      */
   getEntriesByType(entryType: string): any;
-  
+
   /**
      * Creates a timestamp in the browser's performance entry buffer with the given name.
      *
@@ -78,7 +78,7 @@ export declare interface Performance {
      * @memberof IPerformance
      */
   mark(markName: string): void;
-  
+
   /**
      * Creates a named timestamp in the browser's performance entry buffer between two specified marks (known as the start mark and end mark, respectively).
      *
@@ -210,7 +210,7 @@ export declare interface Dom {
     * The global DOM NodeList type.
     */
   NodeList: typeof NodeList;
-  
+
   /**
     * The global DOM SVGElement type.
     */
@@ -308,7 +308,7 @@ export declare interface Dom {
     * @param options An options object specifying bubbles:boolean, cancelable:boolean and/or detail:Object information.
     * @return A CustomEvent.
     */
-  createCustomEvent<T = any>(eventType: string, options?: CustomEventInit<T>): CustomEvent<T>;
+  createCustomEvent(eventType: string, options?: CustomEventInit): CustomEvent;
 
   /**
     * Dispatches an event on the document.
