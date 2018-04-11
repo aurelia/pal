@@ -140,7 +140,7 @@ interface Platform {
   /**
   * The runtime environment's global.
   */
-  global: any,
+  global: any;
   /**
   * A function wich does nothing.
   */
@@ -298,7 +298,7 @@ interface Dom {
   * @param tagName A string that specifies the type of element to be created.
   * @return The created element.
   */
-  createElement<T extends HTMLElementTagNameMap>(tagName: T): HTMLElementTagNameMap<T>;
+  // createElement<T extends keyof HTMLElementTagNameMap>(tagName: T): HTMLElementTagNameMap<T>;
   createElement(tagName: string): HTMLElement;
   /**
   * Creates the specified HTML attribute
@@ -340,7 +340,7 @@ interface Dom {
   * @param options An options object specifying bubbles:boolean, cancelable:boolean and/or detail:Object information.
   * @return A CustomEvent.
   */
-  createCustomEvent<T = any>(eventType: string, options?: CustomEventInit<T>): CustomEvent<T>;
+  createCustomEvent(eventType: string, options?: CustomEventInit): CustomEvent;
   /**
   * Dispatches an event on the document.
   * @param evt The event to dispatch.
@@ -363,17 +363,19 @@ interface Dom {
   * @param query The query to use in searching the document.
   * @return A list of all matched elements in the document.
   */
-  querySelector<K extends keyof HTMLElementTagNameMap>(selectors: K): HTMLElementTagNameMap[K] | null;
-  querySelector<K extends keyof SVGElementTagNameMap>(selectors: K): SVGElementTagNameMap[K] | null;
-  querySelector<E extends Element = Element>(selectors: string): E | null;
+  // enable the following two lines if we switch to TypeScript
+  // querySelector<K extends keyof HTMLElementTagNameMap>(selectors: K): HTMLElementTagNameMap[K] | null;
+  // querySelector<K extends keyof SVGElementTagNameMap>(selectors: K): SVGElementTagNameMap[K] | null;
+  querySelector(selectors: string): Element;
   /**
   * Performs a query selector on the document and returns all located matches.
   * @param query The query to use in searching the document.
   * @return A list of all matched elements in the document.
   */
-  querySelectorAll<K extends keyof HTMLElementTagNameMap>(selectors: K): NodeListOf<HTMLElementTagNameMap[K]>;
-  querySelectorAll<K extends keyof SVGElementTagNameMap>(selectors: K): NodeListOf<SVGElementTagNameMap[K]>;
-  querySelectorAll<E extends Element = Element>(selectors: string): NodeListOf<E>;
+  // enable the following two lines if we switch to TypeScript
+  // querySelectorAll<K extends keyof HTMLElementTagNameMap>(selectors: K): NodeListOf<HTMLElementTagNameMap[K]>;
+  // querySelectorAll<K extends keyof SVGElementTagNameMap>(selectors: K): NodeListOf<SVGElementTagNameMap[K]>;
+  querySelectorAll(selectors: string): NodeList;
   /**
   * Gets the element that is the next sibling of the provided element.
   * @param element The element whose next sibling is being located.
