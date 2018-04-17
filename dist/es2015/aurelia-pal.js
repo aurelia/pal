@@ -7,19 +7,19 @@ export function AggregateError(message, innerError, skipIfAlreadyAggregate) {
 
     const separator = '\n------------------------------------------------\n';
 
-    message += `${ separator }Inner Error:\n`;
+    message += `${separator}Inner Error:\n`;
 
     if (typeof innerError === 'string') {
-      message += `Message: ${ innerError }`;
+      message += `Message: ${innerError}`;
     } else {
       if (innerError.message) {
-        message += `Message: ${ innerError.message }`;
+        message += `Message: ${innerError.message}`;
       } else {
-        message += `Unknown Inner Error Type. Displaying Inner Error as JSON:\n ${ JSON.stringify(innerError, null, '  ') }`;
+        message += `Unknown Inner Error Type. Displaying Inner Error as JSON:\n ${JSON.stringify(innerError, null, '  ')}`;
       }
 
       if (innerError.stack) {
-        message += `\nInner Error Stack:\n${ innerError.stack }`;
+        message += `\nInner Error Stack:\n${innerError.stack}`;
         message += '\nEnd Inner Error Stack';
       }
     }
