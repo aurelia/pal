@@ -1,3 +1,8 @@
+<a name="1.8.1"></a>
+## [1.8.1](https://github.com/aurelia/pal/compare/1.8.0...1.8.1) (2019-01-17)
+
+* Update module configuration in package.json
+
 <a name="1.8.0"></a>
 # [1.8.0](https://github.com/aurelia/pal/compare/1.7.0...1.8.0) (2018-04-17)
 
