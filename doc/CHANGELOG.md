@@ -1,5 +1,5 @@
 <a name="1.8.2"></a>
-## [1.8.2](https://github.com/aurelia/pal/compare/1.8.1...1.8.2) (2019-02-03)
+## [1.8.2](https://github.com/aurelia/pal/compare/1.8.1...1.8.2) (2019-02-04)
 
 
 ### Bug Fixes
