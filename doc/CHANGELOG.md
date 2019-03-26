@@ -1,3 +1,13 @@
+<a name="1.8.3"></a>
+## [1.8.3](https://github.com/aurelia/pal/compare/1.8.1...1.8.3) (2019-03-26)
+
+
+### Bug Fixes
+
+* **all:** change es2015 back to native-modules ([753316a](https://github.com/aurelia/pal/commit/753316a))
+
+
+
 <a name="1.8.2"></a>
 ## [1.8.2](https://github.com/aurelia/pal/compare/1.8.1...1.8.2) (2019-02-04)
 
