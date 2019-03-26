@@ -1,6 +1,6 @@
 {
   "name": "aurelia-pal",
-  "version": "1.8.1",
+  "version": "1.8.2",
   "description": "Aurelia's platform abstraction layer (PAL).",
   "keywords": [
     "aurelia",
@@ -34,16 +34,15 @@
   ],
   "jspm": {
     "registry": "npm",
-    "jspmPackage": true,
     "main": "aurelia-pal",
     "format": "amd",
     "directories": {
       "dist": "dist/amd"
     },
     "devDependencies": {
-      "babel": "npm:babel-core@^5.8.22",
-      "babel-runtime": "npm:babel-runtime@^5.8.20",
-      "core-js": "npm:core-js@^2.0.3"
+      "babel": "babel-core@^5.8.22",
+      "babel-runtime": "^5.8.20",
+      "core-js": "^2.0.3"
     }
   },
   "devDependencies": {
