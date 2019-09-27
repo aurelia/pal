@@ -191,7 +191,7 @@ interface Platform {
    */
   Loader: any;
   /**
-   * Resolves a module name to a path resolvable by the loader. By default returns the first parameter.
+   * Resolves a module name to a path resolvable by the loader. It always returns the first parameter.
    * It is recommended to use this for all dynamic imports as it enables static analysis
    * and optionally allows adding custom metadata used by the build step.
    *
@@ -201,8 +201,8 @@ interface Platform {
    * @param moduleName Absolute or relative path to the module.
    * @param options Optional options used during the static analysis that inform how to process the module.
    */
-  moduleName(moduleName: string, options?: ModuleNameOptions): string;
-  moduleName(moduleName: string, chunk?: string): string;
+  moduleName<T extends string>(moduleName: T, options?: ModuleNameOptions): T;
+  moduleName<T extends string>(moduleName: T, chunk?: string): T;
 }
 
 /**
